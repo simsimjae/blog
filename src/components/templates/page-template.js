@@ -6,7 +6,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY년 MM월 DD일")
         path
         title
       }
@@ -16,6 +16,12 @@ export const pageQuery = graphql`
 
 export default function pageTemplate({ data }) {
   const { html, frontmatter } = data.markdownRemark;
-  console.log(html, frontmatter);
-  return <div dangerouslySetInnerHTML={{ __html: data.markdownRemark }} />;
+
+  return (
+    <div>
+      <h1>{frontmatter.title}</h1>
+      <h3>{frontmatter.date}</h3>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </div>
+  );
 }

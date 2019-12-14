@@ -1,8 +1,11 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Navbar from './navbar';
 
-const Header = ({ siteTitle }) => <header>안녕하세요 {siteTitle}입니다</header>;
+const Header = ({ siteTitle }) => {
+  return <Navbar />;
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
