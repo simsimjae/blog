@@ -1,10 +1,13 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Navbar from './navbar';
+import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  padding: 30px;
+`;
 const Header = ({ siteTitle }) => {
-  return <Navbar />;
+  return <Wrapper />;
 };
 
 Header.propTypes = {
