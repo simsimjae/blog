@@ -2,10 +2,11 @@ import React from 'react';
 import Layout from '../layout';
 import PostList from '../Post-List';
 
-const categoryTemplate = () => {
+const categoryTemplate = props => {
+  const { path } = props;
   return (
     <Layout>
-      <PostList />
+      <PostList path={path} />
     </Layout>
   );
 };

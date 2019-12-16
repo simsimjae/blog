@@ -13,25 +13,30 @@ const List = styled.div`
   margin-top: -1.75rem;
 `;
 
-const PostList = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
+const PostList = ({ path }) => {
+  // 전체 마크다운 포스트에서 현재 카테고리에 맞는 포스트만 걸러서 보여줌.
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                path
+              }
             }
           }
         }
       }
-    }
-  `);
+    `
+  );
+
+  console.log(data, path);
 
   return (
     <List>
       {data.allMarkdownRemark.edges.map((item, index) => {
-        const { path } = item.node.frontmatter;
+        const currentPath = item.node.frontmatter.path;
 
         return <PostCard path={path} key={index} />;
       })}

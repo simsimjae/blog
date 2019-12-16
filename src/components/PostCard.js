@@ -18,7 +18,7 @@ const Card = styled.div`
     .thumbnail-wrapper:before {
       content: '';
       background: black;
-      opacity: 0.1;
+      opacity: 0.2;
       display: block;
       position: absolute;
       top: 0;
@@ -65,13 +65,16 @@ const Card = styled.div`
     opacity: 0.5;
     font-size: 12px;
     text-align: right;
-    margin: 5px 0;
+    margin: 10px 0;
   }
   .contents-wrapper {
     padding: 20px 10px;
   }
   @media screen and (max-width: 1200px) {
     width: calc(50% - 1.75rem);
+    .date {
+      margin: 0;
+    }
   }
 `;
 
