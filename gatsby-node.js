@@ -24,22 +24,30 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
   if (error) throw error;
 
+  const categories = new Set();
   // markdown to page
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     const filePath = node.frontmatter.path;
     const lastIdx = filePath.lastIndexOf('/');
     const category = filePath.slice(0, lastIdx);
 
-    createPage({
-      path: category, // posts/react
-      component: path.resolve(__dirname, 'src/components/templates/category-template.js'),
-      context: {},
-    });
+    categories.add(category);
 
     createPage({
       path: node.frontmatter.path, // posts/react/1
       component: path.resolve(__dirname, 'src/components/templates/page-template.js'),
-      context: {},
+      context: {}
+    });
+  });
+
+  // Make Category's Post List
+  categories.forEach(category => {
+    createPage({
+      path: category,
+      component: path.resolve(__dirname, 'src/components/templates/category-template.js'),
+      context: {
+        postsGlob: category.concat('/*')
+      }
     });
   });
 };

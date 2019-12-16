@@ -1,12 +1,31 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../layout';
 import PostList from '../Post-List';
 
-const categoryTemplate = props => {
-  const { path } = props;
+// 이 템플릿으로 페이지를 찍어내는거니까 여기선 페이지 쿼리 사용 가능함.
+export const query = graphql`
+  query getPosts($postsGlob: String) {
+    allMarkdownRemark(filter: { frontmatter: { path: { glob: $postsGlob } } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+          }
+        }
+      }
+    }
+  }
+`;
+
+const categoryTemplate = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges;
+
   return (
     <Layout>
-      <PostList path={path} />
+      <PostList posts={posts} />
     </Layout>
   );
 };
