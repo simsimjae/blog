@@ -4,8 +4,8 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
 const Sidebar = styled.div`
-  min-width: 300px;
-  height: 100vh;
+  min-width: 250px;
+  min-height: 100vh;
   background: black;
   color: white;
   .wrap {
@@ -29,16 +29,12 @@ const Sidebar = styled.div`
     margin-top: -2px;
   }
   .menu_text {
-    margin-left: 2px;
+    margin-left: 5px;
+    font-size: 20px;
   }
   .logo {
     font-family: 'Nunito', 'Noto Sans KR', sans-serif;
-    font-size: 40px;
-  }
-  .react_icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+    font-size: 25px;
   }
 `;
 
@@ -47,7 +43,7 @@ const sidebar = () => {
     query {
       file(relativePath: { eq: "react.png" }) {
         childImageSharp {
-          fixed(width: 32, height: 32) {
+          fixed(width: 24, height: 24) {
             ...GatsbyImageSharpFixed
           }
         }

@@ -31,12 +31,13 @@ exports.createPages = async ({ actions, graphql }) => {
     const category = filePath.slice(0, lastIdx);
 
     createPage({
-      path: category,
+      path: category, // posts/react
       component: path.resolve(__dirname, 'src/components/templates/category-template.js'),
       context: {},
     });
+
     createPage({
-      path: node.frontmatter.path,
+      path: node.frontmatter.path, // posts/react/1
       component: path.resolve(__dirname, 'src/components/templates/page-template.js'),
       context: {},
     });
