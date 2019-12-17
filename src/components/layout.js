@@ -8,7 +8,7 @@ import Sidebar from './Sidebar';
 const Wrapper = styled.div`
   display: flex;
   .contents {
-    margin: 1.75rem;
+    margin: 1.5rem 2.5rem;
   }
   .right_area {
     display: flex;
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

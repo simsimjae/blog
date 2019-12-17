@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
+import Post from '../Post';
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -22,7 +23,7 @@ export default function pageTemplate({ data }) {
     <Layout>
       <h1>{frontmatter.title}</h1>
       <h3>{frontmatter.date}</h3>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Post html={html} />
     </Layout>
   );
 }
