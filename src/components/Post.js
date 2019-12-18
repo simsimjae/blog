@@ -60,14 +60,14 @@ const PostWrapper = styled.div`
       margin-top: 15px;
     }
   }
-  code {
+  /* code {
     background-color: #f5f5f5;
     padding: 3px 5px;
     font-size: 17px;
     color: #ff5b59;
     border-radius: 3px;
     margin: 0 5px;
-  }
+  } */
   strong {
     padding: 3px 5px;
     border-radius: 5px;
