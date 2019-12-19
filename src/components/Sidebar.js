@@ -5,7 +5,7 @@ import Image from 'gatsby-image';
 import Categories from './Categories';
 
 const Sidebar = styled.div`
-  min-width: 250px;
+  min-width: 350px;
   min-height: 100vh;
   background: black;
   color: white;

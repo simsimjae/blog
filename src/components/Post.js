@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PostWrapper = styled.div`
+  margin: 0 0 300px 100px;
+  width: 900px;
   p {
-    font-size: 18px;
-    margin: 20px 0;
-    color: #555;
-    line-height: 1.7;
+    font-size: 20px;
+    margin: 16px 0;
+    color: #222;
+    line-height: 1.6;
   }
   h1,
   h2,
@@ -16,22 +18,16 @@ const PostWrapper = styled.div`
   h1 {
     font-size: 30px;
     font-weight: bold;
-    margin: 40px 0 30px;
+    margin: 130px 0 24px;
     position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -10px;
-      height: 1px;
-      background: #ddd;
+    &:first-child {
+      margin-top: 50px;
     }
   }
   h2 {
     font-size: 23px;
     font-weight: bold;
-    margin: 35px 0 25px;
+    margin: 100px 0 24px;
   }
   h3 {
     font-size: 20px;
@@ -60,14 +56,6 @@ const PostWrapper = styled.div`
       margin-top: 15px;
     }
   }
-  /* code {
-    background-color: #f5f5f5;
-    padding: 3px 5px;
-    font-size: 17px;
-    color: #ff5b59;
-    border-radius: 3px;
-    margin: 0 5px;
-  } */
   strong {
     padding: 3px 5px;
     border-radius: 5px;

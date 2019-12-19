@@ -2,20 +2,14 @@ html,
 body {
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
 }
-
-.gatsby-highlight {
-  background-color: #fdf6e3;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-}
-
-.gatsby-highlight pre[class*='language-'] {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  overflow: initial;
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+:not(pre) > code[class*='language-'] {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 18px;
+  margin: 0 3px;
+  transform: translateY(-1px);
+  background: #f5f5f5;
+  color: #ff5b59;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+  text-shadow: none;
 }

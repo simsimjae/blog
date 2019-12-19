@@ -70,7 +70,7 @@ const Card = styled.div`
   .contents-wrapper {
     padding: 20px 10px;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1500px) {
     width: calc(50% - 1.75rem);
     .date {
       margin: 0;
