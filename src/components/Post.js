@@ -2,13 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PostWrapper = styled.div`
-  margin: 0 0 300px 100px;
+  margin: 20px 0 300px;
+  padding: 20px 100px 200px;
   width: 900px;
+  border-radius: 25px;
+
+  .post_title {
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .post_date {
+    color: #777;
+    text-align: right;
+    margin: 30px 0;
+    font-size: 18px;
+  }
   p {
     font-size: 20px;
     margin: 16px 0;
     color: #222;
     line-height: 1.6;
+    word-break: break-all;
   }
   h1,
   h2,
@@ -27,7 +44,7 @@ const PostWrapper = styled.div`
   h2 {
     font-size: 23px;
     font-weight: bold;
-    margin: 100px 0 24px;
+    margin: 100px 0 40px;
   }
   h3 {
     font-size: 20px;
@@ -63,8 +80,14 @@ const PostWrapper = styled.div`
   }
 `;
 
-const Post = ({ html }) => {
-  return <PostWrapper dangerouslySetInnerHTML={{ __html: html }} />;
+const Post = ({ html, frontmatter }) => {
+  return (
+    <PostWrapper>
+      <h1 className="post_title">{frontmatter.title}</h1>
+      <p className="post_date">{frontmatter.date}</p>
+      <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
+    </PostWrapper>
+  );
 };
 
 export default Post;

@@ -12,7 +12,7 @@ const List = styled.div`
   margin-top: -1.75rem;
 `;
 
-const PostList = ({ posts }) => {
+const PostCardList = ({ posts }) => {
   return (
     <List>
       {posts.map((item, index) => {
@@ -24,4 +24,4 @@ const PostList = ({ posts }) => {
   );
 };
 
-export default PostList;
+export default PostCardList;

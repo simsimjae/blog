@@ -21,9 +21,7 @@ export default function pageTemplate({ data }) {
 
   return (
     <Layout>
-      <h1>{frontmatter.title}</h1>
-      <h3>{frontmatter.date}</h3>
-      <Post html={html} />
+      <Post className="post" html={html} frontmatter={frontmatter} />
     </Layout>
   );
 }

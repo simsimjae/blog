@@ -15,21 +15,9 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
   }
-  .head {
-  }
 `;
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <Wrapper>
       <Sidebar />

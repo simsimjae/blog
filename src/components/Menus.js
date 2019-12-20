@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
-const CategoryList = styled.ul`
+const MenuList = styled.ul`
   font-size: 28px;
   margin: 20px 0;
   .item {
@@ -26,7 +26,7 @@ const CategoryList = styled.ul`
   }
 `;
 
-const Categories = () => {
+const Menus = () => {
   const { allFile } = useStaticQuery(
     graphql`
       query {
@@ -42,23 +42,23 @@ const Categories = () => {
           }
         }
       }
-    `,
+    `
   );
-  const CategoryDatas = [
+  const MenuDatas = [
     {
       name: '리액트',
       path: 'react',
-      icon: allFile.edges[0].node.childImageSharp.fixed,
+      icon: allFile.edges[0].node.childImageSharp.fixed
     },
     {
       name: '세미나',
       path: 'seminar',
-      icon: allFile.edges[1].node.childImageSharp.fixed,
-    },
+      icon: allFile.edges[1].node.childImageSharp.fixed
+    }
   ];
   return (
-    <CategoryList>
-      {CategoryDatas.map((item, index) => {
+    <MenuList>
+      {MenuDatas.map((item, index) => {
         return (
           <li className="item" key={index}>
             <Link to={`/posts/${item.path}`}>
@@ -68,8 +68,8 @@ const Categories = () => {
           </li>
         );
       })}
-    </CategoryList>
+    </MenuList>
   );
 };
 
-export default Categories;
+export default Menus;
