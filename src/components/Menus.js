@@ -24,6 +24,24 @@ const MenuList = styled.ul`
     margin-left: 5px;
     font-size: 20px;
   }
+  @media screen and (max-width: 1200px) {
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 80%;
+      height: 100%;
+      box-sizing: border-box;
+      margin: 0;
+      .item:first-child {
+        margin-left: 40px;
+      }
+      .item + .item {
+        margin: 0 0 0 40px;
+      }
+    }
+  }
 `;
 
 const Menus = () => {

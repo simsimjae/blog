@@ -5,7 +5,8 @@ import { Link } from 'gatsby';
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(33.3% - 1.75rem);
+  justify-content: space-between;
+  width: 30%;
   min-height: 300px;
   margin-left: 1.75rem;
   margin-top: 1.75rem;
@@ -70,8 +71,10 @@ const Card = styled.div`
   .contents-wrapper {
     padding: 20px 10px;
   }
+  @media screen and (max-width: 1200px) {
+  }
   @media screen and (max-width: 1500px) {
-    width: calc(50% - 1.75rem);
+    width: 45%;
     .date {
       margin: 0;
     }

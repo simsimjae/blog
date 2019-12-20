@@ -8,8 +8,6 @@ const List = styled.div`
   flex-wrap: wrap;
   align-items: center;
   box-sizing: borer-box;
-  margin-left: -1.75rem;
-  margin-top: -1.75rem;
 `;
 
 const PostCardList = ({ posts }) => {

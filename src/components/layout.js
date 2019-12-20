@@ -8,12 +8,18 @@ import Sidebar from './Sidebar';
 const Wrapper = styled.div`
   display: flex;
   .contents {
-    margin: 1.5rem 2.5rem;
+    margin: 24px;
   }
   .right_area {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 350px;
+    @media screen and (max-width: 1200px) {
+      & {
+        margin: 100px auto;
+      }
+    }
   }
 `;
 
