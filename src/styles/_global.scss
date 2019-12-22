@@ -13,3 +13,7 @@ body {
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   text-shadow: none;
 }
+
+pre[class*='language-'] {
+  width: 875px;
+}

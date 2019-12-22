@@ -5,7 +5,7 @@ import Image from 'gatsby-image';
 import Menus from './Menus';
 
 const Sidebar = styled.div`
-  width: 350px;
+  width: 250px;
   background: black;
   color: white;
   position: fixed;
@@ -29,7 +29,7 @@ const Sidebar = styled.div`
       top: 0;
       left: 0;
       right: 0;
-      width: 100vw;
+      width: 100%;
       height: 100px;
       display: flex;
       .wrap {

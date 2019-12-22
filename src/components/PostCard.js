@@ -66,18 +66,9 @@ const Card = styled.div`
     opacity: 0.5;
     font-size: 12px;
     text-align: right;
-    margin: 10px 0;
   }
   .contents-wrapper {
     padding: 20px 10px;
-  }
-  @media screen and (max-width: 1200px) {
-  }
-  @media screen and (max-width: 1500px) {
-    width: 45%;
-    .date {
-      margin: 0;
-    }
   }
 `;
 

@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PostWrapper = styled.div`
-  margin: 20px 0 300px;
-  padding: 20px 100px 200px;
-  width: 900px;
-  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  margin: 50px 0 200px 100px;
 
   .post_title {
     font-size: 36px;
