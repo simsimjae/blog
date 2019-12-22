@@ -5,15 +5,15 @@ import Image from 'gatsby-image';
 
 const MenuList = styled.ul`
   font-size: 28px;
-  margin: 20px 0;
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
   .item {
+    width: 50%;
     a {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-    }
-    & + .item {
-      margin-top: 15px;
     }
   }
   .menu_icon {
@@ -21,21 +21,25 @@ const MenuList = styled.ul`
   }
   .text {
     display: block;
-    margin-left: 5px;
-    font-size: 20px;
+    margin-top: 10px;
+    font-size: 22px;
   }
+
   @media screen and (max-width: 1200px) {
     & {
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: flex-start;
-      flex-wrap: wrap;
       width: 80%;
       height: 100%;
       box-sizing: border-box;
       margin: 0;
-      .item:first-child {
-        margin-left: 40px;
+      .item {
+        &:first-child {
+          margin-left: 40px;
+        }
+        width: auto;
       }
       .item + .item {
         margin: 0 0 0 40px;
@@ -48,11 +52,11 @@ const Menus = () => {
   const { allFile } = useStaticQuery(
     graphql`
       query {
-        allFile(filter: { relativePath: { glob: "icons/*.png" } }) {
+        allFile(filter: { relativePath: { glob: "icons/menus/*.png" } }) {
           edges {
             node {
               childImageSharp {
-                fixed(width: 24, height: 24) {
+                fixed(width: 30, height: 30) {
                   ...GatsbyImageSharpFixed
                 }
               }
