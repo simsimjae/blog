@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import PostCard from './PostCard';
 
 const List = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-  box-sizing: borer-box;
+  display: grid;
+  grid-template-rows: repeat(2, 420px);
+  grid-template-columns: repeat(3, 520px);
+  justify-content: center;
+  align-content: center;
+  gap: 20px 20px;
+  min-height: 100vh;
 `;
 
 const PostCardList = ({ posts }) => {

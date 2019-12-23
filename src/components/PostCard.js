@@ -6,11 +6,8 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30%;
-  min-height: 300px;
-  margin-left: 1.75rem;
-  margin-top: 1.75rem;
   line-height: 1.3;
+  height: 100%;
   box-shadow: inset 0 0 0 1px #e0e0e0;
   border-radius: 10px;
   box-sizing: border-box;
@@ -66,6 +63,7 @@ const Card = styled.div`
     opacity: 0.5;
     font-size: 12px;
     text-align: right;
+    margin-top: 10px;
   }
   .contents-wrapper {
     padding: 20px 10px;

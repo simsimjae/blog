@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   .contents {
     margin-left: 250px;
+    width: 100%;
   }
   @media screen and (max-width: 1200px) {
     .contents {
