@@ -44,7 +44,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && gh-pages -d public -r https://github.com/simsimjae/simsimjae.github.io.git -b master",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
