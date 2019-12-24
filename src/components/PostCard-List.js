@@ -4,12 +4,16 @@ import PostCard from './PostCard';
 
 const List = styled.div`
   display: grid;
-  grid-template-rows: repeat(2, 420px);
-  grid-template-columns: repeat(3, 520px);
+  border: 5px solid red;
+  grid-template-rows: repeat(2, 40%);
+  grid-template-columns: repeat(4, 25%);
+  gap: 20px;
   justify-content: center;
-  align-content: center;
-  gap: 20px 20px;
   min-height: 100vh;
+  padding: 50px 0;
+  @media screen and (max-width: 1500px) {
+    grid-template-columns: repeat(2, 35vw);
+  }
 `;
 
 const PostCardList = ({ posts }) => {

@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   line-height: 1.3;
   height: 100%;
   box-shadow: inset 0 0 0 1px #e0e0e0;
@@ -26,12 +23,25 @@ const Card = styled.div`
       z-index: 999;
     }
   }
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
   .thumbnail-wrapper {
     width: 100%;
-    height: 0;
-    padding-top: 50%;
+    height: calc(100% - 150px);
     position: relative;
     display: block;
+  }
+  .contents-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    padding: 3% 4%;
+    box-sizing: border-box;
   }
   .thumbnail {
     position: absolute;
@@ -47,9 +57,11 @@ const Card = styled.div`
   .title {
     font-size: 20px;
     color: #222;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .desc {
-    margin-top: 10px;
     font-size: 16px;
     color: #888;
     line-height: 1.5;
@@ -63,10 +75,6 @@ const Card = styled.div`
     opacity: 0.5;
     font-size: 12px;
     text-align: right;
-    margin-top: 10px;
-  }
-  .contents-wrapper {
-    padding: 20px 10px;
   }
 `;
 
