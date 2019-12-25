@@ -4,11 +4,21 @@ import { Link } from 'gatsby';
 
 const Card = styled.div`
   line-height: 1.3;
-  height: 100%;
   box-shadow: inset 0 0 0 1px #e0e0e0;
   border-radius: 10px;
   box-sizing: border-box;
   position: relative;
+  width: calc((100% - 20px * 5) / 4);
+  margin-left: 20px;
+  margin-top: 40px;
+  @media screen and (max-width: 1600px) {
+    width: calc((100% - 20px * 4) / 3);
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 1300px) {
+    width: calc((100% - 20px * 3) / 2);
+    margin-left: 20px;
+  }
   &:hover {
     .thumbnail-wrapper:before {
       content: '';
@@ -31,7 +41,8 @@ const Card = styled.div`
   }
   .thumbnail-wrapper {
     width: 100%;
-    height: calc(100% - 150px);
+    height: 0;
+    padding-bottom: 56.25%;
     position: relative;
     display: block;
   }
@@ -39,8 +50,7 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 150px;
-    padding: 3% 4%;
+    padding: 15px 20px;
     box-sizing: border-box;
   }
   .thumbnail {
@@ -57,9 +67,10 @@ const Card = styled.div`
   .title {
     font-size: 20px;
     color: #222;
-    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    white-space: nowrap;
   }
   .desc {
     font-size: 16px;
@@ -75,6 +86,7 @@ const Card = styled.div`
     opacity: 0.5;
     font-size: 12px;
     text-align: right;
+    margin: 3% 0;
   }
 `;
 

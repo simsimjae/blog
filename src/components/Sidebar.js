@@ -44,7 +44,7 @@ const Sidebar = styled.div`
     border-radius: 50%;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1080px) {
     & {
       top: 0;
       left: 0;
@@ -94,7 +94,7 @@ const sidebar = () => {
         </Link>
         <ul className="profile_links">
           <li className="profile_link github">
-            <a href="https://github.com/JaeCheolSim" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/simsimjae" target="_blank" rel="noopener noreferrer">
               <Image fixed={allFile.edges[0].node.childImageSharp.fixed} />
             </a>
           </li>

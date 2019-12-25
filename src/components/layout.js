@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     margin-left: 250px;
     width: 100%;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1080px) {
     .contents {
       margin: 100px 1.75rem;
     }

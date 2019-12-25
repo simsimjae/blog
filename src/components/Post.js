@@ -36,6 +36,7 @@ const PostWrapper = styled.div`
     display: block;
     width: 100%;
     object-fit: cover;
+    margin: 30px 0;
   }
   h1 {
     font-size: 30px;
