@@ -32,6 +32,11 @@ const PostWrapper = styled.div`
   h3 {
     color: #222;
   }
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
   h1 {
     font-size: 30px;
     font-weight: bold;
