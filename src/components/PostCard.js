@@ -19,6 +19,10 @@ const Card = styled.div`
     width: calc((100% - 20px * 3) / 2);
     margin-left: 20px;
   }
+  @media screen and (max-width: 700px) {
+    width: calc(100% - 3% * 2);
+    margin-left: 3%;
+  }
   &:hover {
     .thumbnail-wrapper:before {
       content: '';
@@ -86,7 +90,7 @@ const Card = styled.div`
     opacity: 0.5;
     font-size: 12px;
     text-align: right;
-    margin: 3% 0;
+    margin: 2% 0;
   }
 `;
 

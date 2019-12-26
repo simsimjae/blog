@@ -4,12 +4,13 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 const MenuList = styled.ul`
-  font-size: 28px;
   padding: 20px 10px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: -30px;
   .item {
     width: 50%;
+    margin-top: 30px;
     a {
       display: flex;
       flex-direction: column;
@@ -22,27 +23,33 @@ const MenuList = styled.ul`
   .text {
     display: block;
     margin-top: 10px;
-    font-size: 22px;
+    font-size: 16px;
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1080px) {
     & {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      width: 80%;
+      display: block;
+      width: 100%;
       height: 100%;
       box-sizing: border-box;
       margin: 0;
+      overflow: hidden;
+      overflow-x: auto;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none !important;
+      }
       .item {
+        display: inline-block;
+        margin-top: 5px;
         &:first-child {
-          margin-left: 40px;
+          margin-left: 0px;
         }
         width: auto;
       }
       .item + .item {
-        margin: 0 0 0 40px;
+        margin: 0 0 0 25px;
       }
     }
   }
@@ -56,7 +63,7 @@ const Menus = () => {
           edges {
             node {
               childImageSharp {
-                fixed(width: 30, height: 30) {
+                fixed(width: 35, height: 35) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -80,6 +87,56 @@ const Menus = () => {
   ];
   return (
     <MenuList>
+      {MenuDatas.map((item, index) => {
+        return (
+          <li className="item" key={index}>
+            <Link to={`/posts/${item.path}`}>
+              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
+              <span className="text">{item.name}</span>
+            </Link>
+          </li>
+        );
+      })}
+      {MenuDatas.map((item, index) => {
+        return (
+          <li className="item" key={index}>
+            <Link to={`/posts/${item.path}`}>
+              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
+              <span className="text">{item.name}</span>
+            </Link>
+          </li>
+        );
+      })}
+      {MenuDatas.map((item, index) => {
+        return (
+          <li className="item" key={index}>
+            <Link to={`/posts/${item.path}`}>
+              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
+              <span className="text">{item.name}</span>
+            </Link>
+          </li>
+        );
+      })}
+      {MenuDatas.map((item, index) => {
+        return (
+          <li className="item" key={index}>
+            <Link to={`/posts/${item.path}`}>
+              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
+              <span className="text">{item.name}</span>
+            </Link>
+          </li>
+        );
+      })}
+      {MenuDatas.map((item, index) => {
+        return (
+          <li className="item" key={index}>
+            <Link to={`/posts/${item.path}`}>
+              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
+              <span className="text">{item.name}</span>
+            </Link>
+          </li>
+        );
+      })}
       {MenuDatas.map((item, index) => {
         return (
           <li className="item" key={index}>

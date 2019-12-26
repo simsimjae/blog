@@ -13,6 +13,8 @@ const Sidebar = styled.div`
   left: 0;
   bottom: 0;
   padding: 50px 0;
+  z-index: 1;
+
   .wrap {
     display: flex;
     flex-direction: column;
@@ -20,18 +22,20 @@ const Sidebar = styled.div`
     margin-bottom: 50px;
   }
   .profile {
-    border-radius: 50%;
+    display: block;
+    width: 100px;
+    height: 100px;
   }
   .profile_links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    .tistory {
-      img {
-        width: 26px !important;
-        height: 26px !important;
-        object-position: -1px -1px !important;
+    .gatsby-image-wrapper {
+      width: 24px;
+      height: 24px;
+      .tistory & {
+        transform: scale(1.1, 1.1);
       }
     }
   }
@@ -52,8 +56,23 @@ const Sidebar = styled.div`
       width: 100%;
       height: 100px;
       display: flex;
+      padding: 0 3%;
       .wrap {
-        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        margin-right: 30px;
+      }
+      .profile {
+        width: 60px;
+        height: 60px;
+      }
+      .profile_links {
+        margin-top: 0;
+        .gatsby-image-wrapper {
+          width: 16px;
+          height: 16px;
+        }
       }
     }
   }
@@ -65,8 +84,8 @@ const sidebar = () => {
       query {
         file(name: { eq: "profile" }) {
           childImageSharp {
-            fixed(width: 100, height: 100) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 60) {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -74,8 +93,8 @@ const sidebar = () => {
           edges {
             node {
               childImageSharp {
-                fixed(width: 24, height: 24) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 24) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -90,22 +109,22 @@ const sidebar = () => {
     <Sidebar>
       <div className="wrap">
         <Link to="/">
-          <Image className="profile" fixed={file.childImageSharp.fixed} />
+          <Image className="profile" fluid={file.childImageSharp.fluid} />
         </Link>
         <ul className="profile_links">
           <li className="profile_link github">
             <a href="https://github.com/simsimjae" target="_blank" rel="noopener noreferrer">
-              <Image fixed={allFile.edges[0].node.childImageSharp.fixed} />
+              <Image fluid={allFile.edges[0].node.childImageSharp.fluid} />
             </a>
           </li>
           <li className="profile_link naver">
             <a href="https://mail.naver.com/write/popup?srvid=note&to=simsimjae@naver.com" target="_blank" rel="noopener noreferrer">
-              <Image fixed={allFile.edges[1].node.childImageSharp.fixed} />
+              <Image fluid={allFile.edges[1].node.childImageSharp.fluid} />
             </a>
           </li>
           <li className="profile_link tistory">
             <a href="https://simsimjae.tistory.com" target="_blank" rel="noopener noreferrer">
-              <Image fixed={allFile.edges[2].node.childImageSharp.fixed} />
+              <Image fluid={allFile.edges[2].node.childImageSharp.fluid} />
             </a>
           </li>
         </ul>
