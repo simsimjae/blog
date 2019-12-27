@@ -5,7 +5,7 @@ import Image from 'gatsby-image';
 import Menus from './Menus';
 
 const Sidebar = styled.div`
-  width: 250px;
+  width: 350px;
   background: black;
   color: white;
   position: fixed;
@@ -48,6 +48,11 @@ const Sidebar = styled.div`
     border-radius: 50%;
   }
 
+  @media screen and (max-width: 1500px) {
+    & {
+      width: 250px;
+    }
+  }
   @media screen and (max-width: 1080px) {
     & {
       top: 0;

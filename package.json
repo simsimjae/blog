@@ -43,7 +43,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop -H 0.0.0.0 -p 8000",
     "deploy": "gatsby build && gh-pages -d public -r https://github.com/simsimjae/simsimjae.github.io.git -b master",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

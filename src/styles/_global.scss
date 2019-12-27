@@ -20,3 +20,10 @@ body {
 pre[class*='language-'] {
   width: 875px;
 }
+
+@media screen and (max-width: 414px) {
+  :not(pre) > code[class*='language-'] {
+    font-size: 1.5rem;
+    padding: 2px 5px 1px;
+  }
+}

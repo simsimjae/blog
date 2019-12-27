@@ -7,8 +7,13 @@ import styles from '../styles/index.scss';
 const Wrapper = styled.div`
   display: flex;
   .contents {
-    margin-left: 250px;
+    margin-left: 350px;
     width: 100%;
+  }
+  @media screen and (max-width: 1500px) {
+    .contents {
+      margin-left: 250px;
+    }
   }
   @media screen and (max-width: 1080px) {
     .contents {

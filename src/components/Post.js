@@ -5,23 +5,27 @@ const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 750px;
-  margin: 50px 0 200px 100px;
+  margin: 50px auto 200px;
+  margin-left: 200px;
+  line-height: 1.3;
 
   .post_title {
-    font-size: 36px;
+    font-size: 3.6rem;
     color: black;
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
+    word-break: keep-all;
+    word-wrap: break-word;
   }
   .post_date {
     color: #777;
     text-align: right;
     margin: 30px 0;
-    font-size: 18px;
+    font-size: 1.5rem;
   }
   p {
-    font-size: 20px;
+    font-size: 1.9rem;
     margin: 16px 0;
     color: #222;
     line-height: 1.6;
@@ -39,7 +43,7 @@ const PostWrapper = styled.div`
     margin: 30px 0;
   }
   h1 {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
     margin: 130px 0 24px;
     position: relative;
@@ -48,17 +52,17 @@ const PostWrapper = styled.div`
     }
   }
   h2 {
-    font-size: 23px;
+    font-size: 2.3rem;
     font-weight: bold;
     margin: 100px 0 40px;
   }
   h3 {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
     margin: 30px 0 20px;
   }
   ol {
-    font-size: 18px;
+    font-size: 1.8rem;
     padding-left: 30px;
     list-style: initial;
     margin: 20px 0;
@@ -68,7 +72,7 @@ const PostWrapper = styled.div`
     }
   }
   ul {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #222;
     padding-left: 30px;
     list-style: decimal;
@@ -83,6 +87,74 @@ const PostWrapper = styled.div`
     padding: 3px 5px;
     border-radius: 5px;
     background: #ffefd5;
+  }
+  @media screen and (max-width: 1500px) {
+    & {
+      width: 750px;
+      padding: 16px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    & {
+      margin: 0;
+      width: 100%;
+      padding: 16px;
+      box-sizing: border-box;
+      .post_title {
+        &:first-child {
+          margin-top: 20px;
+        }
+        font-size: 2.6rem;
+      }
+      .post_date {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+      p {
+        font-size: 1.6rem;
+        margin: 1.6rem 0;
+      }
+      img {
+        margin: 10px 0;
+      }
+      h1 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin: 50px 0 20px;
+        position: relative;
+      }
+      h2 {
+        font-size: 2rem;
+        margin: 50px 0 20px;
+      }
+      h3 {
+        font-size: 1.8rem;
+        margin: 30px 0 20px;
+      }
+      ol {
+        padding-left: 16px;
+        margin: 20px 0;
+        font-size: 1.6rem;
+      }
+      ul {
+        padding-left: 16px;
+        font-size: 1.6rem;
+        margin: 20px 0;
+      }
+      li {
+        & + li {
+          margin-top: 10px;
+        }
+      }
+      strong {
+        font-size: 1.6rem;
+        padding: 3px 5px;
+        border-radius: 5px;
+        background: #ffefd5;
+      }
+    }
   }
 `;
 
