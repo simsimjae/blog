@@ -8,7 +8,8 @@ const PostWrapper = styled.div`
   margin: 50px auto 200px;
   margin-left: 200px;
   line-height: 1.3;
-
+  overflow-x: hidden;
+  box-sizing: border-box;
   .post_title {
     font-size: 3.6rem;
     color: black;
@@ -91,8 +92,16 @@ const PostWrapper = styled.div`
   @media screen and (max-width: 1500px) {
     & {
       width: 750px;
-      padding: 16px;
+      padding: 20px;
       margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    & {
+      p {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -100,8 +109,9 @@ const PostWrapper = styled.div`
     & {
       margin: 0;
       width: 100%;
-      padding: 16px;
       box-sizing: border-box;
+      word-break: break-all;
+      word-wrap: break-word;
       .post_title {
         &:first-child {
           margin-top: 20px;
@@ -113,8 +123,8 @@ const PostWrapper = styled.div`
         margin: 0;
       }
       p {
-        font-size: 1.6rem;
-        margin: 1.6rem 0;
+        font-size: 1.7rem;
+        margin: 3rem 0;
       }
       img {
         margin: 10px 0;
@@ -134,12 +144,12 @@ const PostWrapper = styled.div`
         margin: 30px 0 20px;
       }
       ol {
-        padding-left: 16px;
+        padding-left: 20px;
         margin: 20px 0;
         font-size: 1.6rem;
       }
       ul {
-        padding-left: 16px;
+        padding-left: 20px;
         font-size: 1.6rem;
         margin: 20px 0;
       }

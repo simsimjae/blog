@@ -15,6 +15,7 @@ body {
   color: #ff5b59;
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   text-shadow: none;
+  word-break: break-all;
 }
 
 pre[class*='language-'] {
@@ -24,6 +25,7 @@ pre[class*='language-'] {
 @media screen and (max-width: 414px) {
   :not(pre) > code[class*='language-'] {
     font-size: 1.5rem;
-    padding: 2px 5px 1px;
+    padding: 1px 5px 2px;
+    line-height: 1.3;
   }
 }
