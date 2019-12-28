@@ -40,11 +40,11 @@ exports.createPages = async ({ actions, graphql }) => {
     });
   });
 
-  // Make Category's Post List
+  // Make PostCard List
   categories.forEach(category => {
     createPage({
       path: category,
-      component: path.resolve(__dirname, 'src/components/templates/category-template.js'),
+      component: path.resolve(__dirname, 'src/components/templates/postcard-list-template.js'),
       context: {
         postsGlob: category.concat('/*')
       }

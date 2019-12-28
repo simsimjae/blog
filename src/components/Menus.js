@@ -7,10 +7,10 @@ const MenuList = styled.ul`
   padding: 20px 10px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
+  margin-top: -50px;
   .item {
     width: 50%;
-    margin-top: 30px;
+    margin-top: 50px;
     a {
       display: flex;
       flex-direction: column;
@@ -49,7 +49,7 @@ const MenuList = styled.ul`
         width: auto;
       }
       .item + .item {
-        margin: 0 0 0 25px;
+        margin: 0 0 0 30px;
       }
     }
   }
@@ -83,63 +83,18 @@ const Menus = () => {
       name: '세미나',
       path: 'seminar',
       icon: allFile.edges[1].node.childImageSharp.fixed
+    },
+    {
+      name: 'TIL',
+      path: 'TIL',
+      icon: allFile.edges[2].node.childImageSharp.fixed
     }
   ];
   return (
     <MenuList>
       {MenuDatas.map((item, index) => {
         return (
-          <li className="item" key={index}>
-            <Link to={`/posts/${item.path}`}>
-              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
-              <span className="text">{item.name}</span>
-            </Link>
-          </li>
-        );
-      })}
-      {MenuDatas.map((item, index) => {
-        return (
-          <li className="item" key={index}>
-            <Link to={`/posts/${item.path}`}>
-              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
-              <span className="text">{item.name}</span>
-            </Link>
-          </li>
-        );
-      })}
-      {MenuDatas.map((item, index) => {
-        return (
-          <li className="item" key={index}>
-            <Link to={`/posts/${item.path}`}>
-              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
-              <span className="text">{item.name}</span>
-            </Link>
-          </li>
-        );
-      })}
-      {MenuDatas.map((item, index) => {
-        return (
-          <li className="item" key={index}>
-            <Link to={`/posts/${item.path}`}>
-              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
-              <span className="text">{item.name}</span>
-            </Link>
-          </li>
-        );
-      })}
-      {MenuDatas.map((item, index) => {
-        return (
-          <li className="item" key={index}>
-            <Link to={`/posts/${item.path}`}>
-              <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
-              <span className="text">{item.name}</span>
-            </Link>
-          </li>
-        );
-      })}
-      {MenuDatas.map((item, index) => {
-        return (
-          <li className="item" key={index}>
+          <li className={`item ${item.path}`} key={index}>
             <Link to={`/posts/${item.path}`}>
               <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
               <span className="text">{item.name}</span>

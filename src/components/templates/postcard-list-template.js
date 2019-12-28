@@ -14,13 +14,16 @@ export const query = graphql`
             path
             date
           }
+          internal {
+            content
+          }
         }
       }
     }
   }
 `;
 
-const categoryTemplate = ({ data }) => {
+const PostCardListTemplate = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
@@ -30,4 +33,4 @@ const categoryTemplate = ({ data }) => {
   );
 };
 
-export default categoryTemplate;
+export default PostCardListTemplate;

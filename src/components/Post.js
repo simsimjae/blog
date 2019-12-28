@@ -28,14 +28,18 @@ const PostWrapper = styled.div`
   p {
     font-size: 2rem;
     margin: 30px 0;
-    color: #222;
+    color: #444;
     line-height: 1.6;
+    letter-spacing: -0.3px;
     word-break: break-all;
   }
   h1,
   h2,
   h3 {
     color: #222;
+    &:first-child {
+      margin-top: 50px;
+    }
   }
   img {
     display: block;
@@ -46,35 +50,32 @@ const PostWrapper = styled.div`
   h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin: 130px 0 24px;
+    margin: 80px 0 40px;
     position: relative;
-    &:first-child {
-      margin-top: 50px;
-    }
   }
   h2 {
     font-size: 2.4rem;
     font-weight: bold;
-    margin: 100px 0 40px;
+    margin: 80px 0 40px;
   }
   h3 {
     font-size: 2rem;
     font-weight: bold;
-    margin: 30px 0 20px;
+    margin: 40px 0;
   }
   ol {
     font-size: 1.8rem;
     padding-left: 30px;
     list-style: initial;
     margin: 20px 0;
-    color: #222;
+    color: #777;
     li:before {
       content: '';
     }
   }
   ul {
     font-size: 1.8rem;
-    color: #222;
+    color: #777;
     padding-left: 30px;
     list-style: decimal;
     margin: 20px 0;
@@ -105,15 +106,14 @@ const PostWrapper = styled.div`
       }
     }
   }
-
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 782px) {
+    padding: 16px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: break-all;
+    word-wrap: break-word;
     & {
-      margin: 0;
-      padding: 16px;
-      width: 100%;
-      box-sizing: border-box;
-      word-break: break-all;
-      word-wrap: break-word;
       .post_title {
         &:first-child {
           margin-top: 20px;

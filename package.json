@@ -35,7 +35,8 @@
     "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
     "path": "^0.12.7",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "remove-markdown": "^0.3.0"
   },
   "keywords": [
     "gatsby"

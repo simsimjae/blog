@@ -17,19 +17,7 @@ const PostCardList = ({ posts }) => {
   return (
     <List>
       {posts.map((item, index) => {
-        const { path } = item.node.frontmatter;
-
-        return <PostCard path={path} key={index} />;
-      })}
-      {posts.map((item, index) => {
-        const { path } = item.node.frontmatter;
-
-        return <PostCard path={path} key={index} />;
-      })}
-      {posts.map((item, index) => {
-        const { path } = item.node.frontmatter;
-
-        return <PostCard path={path} key={index} />;
+        return <PostCard key={index} data={item.node} />;
       })}
     </List>
   );

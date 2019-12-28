@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import removemd from 'remove-markdown';
 
 const Card = styled.div`
   line-height: 1.3;
@@ -56,6 +57,7 @@ const Card = styled.div`
     justify-content: space-between;
     padding: 15px 20px;
     box-sizing: border-box;
+    flex: 1;
   }
   .thumbnail {
     position: absolute;
@@ -69,7 +71,8 @@ const Card = styled.div`
     border-top-left-radius: 8px;
   }
   .title {
-    font-size: 20px;
+    height: 5.2rem;
+    font-size: 2rem;
     color: #222;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -78,6 +81,7 @@ const Card = styled.div`
   }
   .desc {
     font-size: 16px;
+    height: 72px;
     color: #888;
     line-height: 1.5;
     display: -webkit-box;
@@ -90,11 +94,14 @@ const Card = styled.div`
     opacity: 0.5;
     font-size: 12px;
     text-align: right;
-    margin: 2% 0;
+    margin: 3% 0 5%;
   }
 `;
 
-const PostCard = ({ path }) => {
+const PostCard = ({ data }) => {
+  const { path, title, date } = data.frontmatter;
+  const { content } = data.internal;
+  console.log(content);
   return (
     <Card>
       <Link to={path}>
@@ -102,9 +109,9 @@ const PostCard = ({ path }) => {
           <img src="https://phinf.pstatic.net/tvcast/20171210_15/JQk4p_1512907951721EiFDQ_PNG/fVZgPG0PxYNm.png" className="thumbnail" alt="" />
         </div>
         <div className="contents-wrapper">
-          <p className="title">원티드 - 요즘 프론트엔드 개발 어떻게 하지? 참관 후기</p>
-          <p className="date">2019년 12월 20일</p>
-          <p className="desc">12월 4일 원티드에서 진행한 요즘 프론트 개발 어떻게하지?라는 행사에 참관했다. 이렇게 평일에 진행하는 행사에 참여해보는것은 진짜 드문일인것같다. 세줄이넘어가면</p>
+          <p className="title">{title}</p>
+          <p className="date">{date}</p>
+          <p className="desc">{removemd(content)}</p>
         </div>
       </Link>
     </Card>

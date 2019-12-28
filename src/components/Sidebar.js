@@ -25,6 +25,7 @@ const Sidebar = styled.div`
     display: block;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
   }
   .profile_links {
     display: flex;
@@ -34,6 +35,7 @@ const Sidebar = styled.div`
     .gatsby-image-wrapper {
       width: 24px;
       height: 24px;
+      border-radius: 50%;
       .tistory & {
         transform: scale(1.1, 1.1);
       }
@@ -43,9 +45,6 @@ const Sidebar = styled.div`
     & + .profile_link {
       margin-left: 20px;
     }
-  }
-  .gatsby-image-wrapper {
-    border-radius: 50%;
   }
 
   @media screen and (max-width: 1500px) {
