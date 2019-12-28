@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import removemd from 'remove-markdown';
 
 const Card = styled.div`
   line-height: 1.3;
@@ -95,13 +94,13 @@ const Card = styled.div`
     font-size: 12px;
     text-align: right;
     margin: 3% 0 5%;
+    word-break: break-all;
   }
 `;
 
 const PostCard = ({ data }) => {
   const { path, title, date } = data.frontmatter;
-  const { content } = data.internal;
-  console.log(content);
+  const { excerpt } = data;
   return (
     <Card>
       <Link to={path}>
@@ -111,7 +110,7 @@ const PostCard = ({ data }) => {
         <div className="contents-wrapper">
           <p className="title">{title}</p>
           <p className="date">{date}</p>
-          <p className="desc">{removemd(content)}</p>
+          <p className="desc">{excerpt}</p>
         </div>
       </Link>
     </Card>

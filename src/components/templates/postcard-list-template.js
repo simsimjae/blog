@@ -14,9 +14,7 @@ export const query = graphql`
             path
             date
           }
-          internal {
-            content
-          }
+          excerpt(truncate: true, pruneLength: 200)
         }
       }
     }

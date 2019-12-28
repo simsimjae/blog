@@ -36,6 +36,7 @@
     "node-sass": "^4.13.0",
     "path": "^0.12.7",
     "prettier": "^1.19.1",
+    "react-utterances": "^0.6.4",
     "remove-markdown": "^0.3.0"
   },
   "keywords": [

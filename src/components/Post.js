@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactUtterences from 'react-utterances';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -10,6 +11,9 @@ const PostWrapper = styled.div`
   line-height: 1.3;
   overflow-x: hidden;
   box-sizing: border-box;
+  .post {
+    margin-bottom: 100px;
+  }
   .post_title {
     font-size: 3.6rem;
     color: black;
@@ -97,7 +101,6 @@ const PostWrapper = styled.div`
       margin: 0 auto;
     }
   }
-
   @media screen and (max-width: 1080px) {
     & {
       padding: 32px;
@@ -172,11 +175,13 @@ const PostWrapper = styled.div`
 `;
 
 const Post = ({ html, frontmatter }) => {
+  const repo = 'simsimjae/simsimjae.github.io';
   return (
     <PostWrapper>
       <h1 className="post_title">{frontmatter.title}</h1>
       <p className="post_date">{frontmatter.date}</p>
       <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
+      <ReactUtterences repo={repo} type="url" theme="" />
     </PostWrapper>
   );
 };
