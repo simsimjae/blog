@@ -13,6 +13,7 @@ export const query = graphql`
             title
             path
             date
+            hero
           }
           excerpt(truncate: true, pruneLength: 200)
         }

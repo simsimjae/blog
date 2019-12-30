@@ -70,7 +70,6 @@ const Card = styled.div`
     border-top-left-radius: 8px;
   }
   .title {
-    height: 5.2rem;
     font-size: 2rem;
     color: #222;
     display: -webkit-box;
@@ -99,13 +98,13 @@ const Card = styled.div`
 `;
 
 const PostCard = ({ data }) => {
-  const { path, title, date } = data.frontmatter;
+  const { path, title, date, hero } = data.frontmatter;
   const { excerpt } = data;
   return (
     <Card>
       <Link to={path}>
         <div className="thumbnail-wrapper">
-          <img src="https://phinf.pstatic.net/tvcast/20171210_15/JQk4p_1512907951721EiFDQ_PNG/fVZgPG0PxYNm.png" className="thumbnail" alt="" />
+          <img src={hero} className="thumbnail" alt="카드 이미지" />
         </div>
         <div className="contents-wrapper">
           <p className="title">{title}</p>

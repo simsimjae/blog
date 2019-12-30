@@ -5,10 +5,12 @@ html,
 body {
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
 }
+
 .pre[class*='language-'] {
   width: 100%;
   box-sizing: border-box;
 }
+
 code[class*='language-'] {
   font-size: 1.6rem;
   line-height: 1.6;

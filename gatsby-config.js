@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'SimSimJae의 기술 블로그',
-    description: `1day && (1commit || 1post || 1solve)`,
-    author: `Sim Jae Cheol `
+    description: `1day && 1commit`,
+    author: `Sim Jae Cheol`
   },
   plugins: [
     `gatsby-plugin-playground`,
@@ -35,13 +35,22 @@ module.exports = {
         path: `${__dirname}/posts`
       }
     },
-    'gatsby-transformer-remark',
     'gatsby-plugin-sass',
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590
+            }
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -50,6 +59,13 @@ module.exports = {
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false
+            }
+          },
+          {
+            resolve: `gatsby-remark-emoji`,
+            options: {
+              emojiConversion: 'shortnameToUnicode',
+              ascii: true
             }
           }
         ]

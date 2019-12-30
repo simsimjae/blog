@@ -5,9 +5,10 @@ import ReactUtterences from 'react-utterances';
 const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 750px;
+  min-width: 750px;
+  width: 75%;
   margin: 50px auto 200px;
-  margin-left: 200px;
+  margin-right: 200px;
   line-height: 1.3;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -30,9 +31,9 @@ const PostWrapper = styled.div`
     font-size: 1.5rem;
   }
   p {
-    font-size: 2rem;
+    font-size: 1.9rem;
     margin: 30px 0;
-    color: #444;
+    color: #404040;
     line-height: 1.6;
     letter-spacing: -0.3px;
     word-break: break-all;
@@ -40,7 +41,7 @@ const PostWrapper = styled.div`
   h1,
   h2,
   h3 {
-    color: #222;
+    color: #404040;
     &:first-child {
       margin-top: 50px;
     }
@@ -96,7 +97,6 @@ const PostWrapper = styled.div`
   }
   @media screen and (max-width: 1500px) {
     & {
-      width: 750px;
       padding: 20px;
       margin: 0 auto;
     }
@@ -104,9 +104,6 @@ const PostWrapper = styled.div`
   @media screen and (max-width: 1080px) {
     & {
       padding: 32px;
-      p {
-        font-size: 2.2rem;
-      }
     }
   }
   @media screen and (max-width: 782px) {
@@ -128,7 +125,6 @@ const PostWrapper = styled.div`
         margin: 0;
       }
       p {
-        font-size: 1.8rem;
         line-height: 1.65;
         margin: 3rem 0;
       }
