@@ -35,8 +35,6 @@ module.exports = {
         path: `${__dirname}/posts`
       }
     },
-    'gatsby-plugin-sass',
-    // `gatsby-plugin-offline`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -48,7 +46,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590
+              maxWidth: 1200
             }
           },
           {
@@ -70,6 +68,7 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    'gatsby-plugin-sass'
   ]
 };

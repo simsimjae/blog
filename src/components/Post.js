@@ -6,9 +6,8 @@ const PostWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 750px;
-  width: 75%;
+  width: 70%;
   margin: 50px auto 200px;
-  margin-right: 200px;
   line-height: 1.3;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -31,17 +30,16 @@ const PostWrapper = styled.div`
     font-size: 1.5rem;
   }
   p {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     margin: 30px 0;
-    color: #404040;
-    line-height: 1.6;
-    letter-spacing: -0.3px;
+    color: #222;
+    line-height: 1.8;
     word-break: break-all;
   }
   h1,
   h2,
   h3 {
-    color: #404040;
+    color: #222;
     &:first-child {
       margin-top: 50px;
     }
@@ -73,14 +71,14 @@ const PostWrapper = styled.div`
     padding-left: 30px;
     list-style: initial;
     margin: 20px 0;
-    color: #777;
+    color: #444;
     li:before {
       content: '';
     }
   }
   ul {
     font-size: 1.8rem;
-    color: #777;
+    color: #444;
     padding-left: 30px;
     list-style: decimal;
     margin: 20px 0;

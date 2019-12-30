@@ -107,7 +107,6 @@ const sidebar = () => {
       }
     `
   );
-  console.log(file, allFile);
 
   return (
     <Sidebar>
