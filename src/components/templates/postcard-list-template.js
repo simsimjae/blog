@@ -13,7 +13,13 @@ export const query = graphql`
             title
             path
             date
-            hero
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 1080) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt(truncate: true, pruneLength: 200)
         }

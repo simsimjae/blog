@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import Image from 'gatsby-image';
 
 const Card = styled.div`
   line-height: 1.3;
-  box-shadow: inset 0 0 0 1px #e0e0e0;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
   border-radius: 10px;
   box-sizing: border-box;
   position: relative;
@@ -103,9 +105,7 @@ const PostCard = ({ data }) => {
   return (
     <Card>
       <Link to={path}>
-        <div className="thumbnail-wrapper">
-          <img src={hero} className="thumbnail" alt="카드 이미지" />
-        </div>
+        <div className="thumbnail-wrapper">{hero && <Image fluid={hero.childImageSharp.fluid} alt="포스트 카드 이미지" />}</div>
         <div className="contents-wrapper">
           <p className="title">{title}</p>
           <p className="date">{date}</p>
