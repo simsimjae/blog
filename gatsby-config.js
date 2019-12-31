@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: 'SimSimJae의 기술 블로그',
@@ -69,6 +71,18 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-pixabay',
+      options: {
+        key: process.env.PIXABAY_API_KEY,
+        q: 'candy',
+        image_type: 'photo',
+        editors_choice: true,
+        safesearch: true,
+        order: 'popular',
+        per_page: 200
+      }
+    }
   ]
 };

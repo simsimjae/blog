@@ -25,15 +25,35 @@ export const query = graphql`
         }
       }
     }
+    allFile(filter: { relativePath: { glob: "banners/*" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
+    allPixabayPhoto(limit: 10) {
+      edges {
+        node {
+          largeImageURL
+          pageURL
+          tags
+          user
+        }
+      }
+    }
   }
 `;
 
 const PostCardListTemplate = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
+  const gifs = data.allFile.edges;
+  const pngs = data.allPixabayPhoto.edges;
+  const images = [...gifs, ...pngs];
 
   return (
     <Layout>
-      <PostCardList posts={posts} />
+      <PostCardList posts={posts} images={images} />
     </Layout>
   );
 };

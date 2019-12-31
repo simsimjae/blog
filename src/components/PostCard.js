@@ -97,15 +97,25 @@ const Card = styled.div`
     margin: 3% 0 5%;
     word-break: break-all;
   }
+  .banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
-const PostCard = ({ data }) => {
+const PostCard = ({ data, imageUrl }) => {
   const { path, title, date, hero } = data.frontmatter;
   const { excerpt } = data;
+  console.log(imageUrl);
+
   return (
     <Card>
       <Link to={path}>
-        <div className="thumbnail-wrapper">{hero && <Image fluid={hero.childImageSharp.fluid} alt="포스트 카드 이미지" />}</div>
+        <div className="thumbnail-wrapper">{hero ? <Image fluid={hero.childImageSharp.fluid} alt="마크다운 카드 배너" /> : <img className="banner" src={imageUrl} alt="포스트 기본 배너" />}</div>
         <div className="contents-wrapper">
           <p className="title">{title}</p>
           <p className="date">{date}</p>
