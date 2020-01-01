@@ -97,7 +97,7 @@ const PostWrapper = styled.div`
     position: relative;
     padding: 10px 20px;
     padding-left: 60px;
-    background: #fbfbfb;
+    background: #f9f9f9;
     border-radius: 5px;
     box-sizing: border-box;
 
