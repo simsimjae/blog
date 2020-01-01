@@ -1,7 +1,7 @@
 ---
-path: '/posts/react/2'
-date: '2019-12-16'
-title: 'My first blog post'
+path: "/posts/react/2"
+date: "2019-12-16"
+title: "My first blog post"
 ---
 
 두번째 리액트 게시글
@@ -21,7 +21,7 @@ title: 'My first blog post'
     - hihi
 
 ```javascript
-var lines = ['2016-09-15 01:00:04.001 2.0s', '2016-09-15 01:00:07.000 2s'];
+var lines = ["2016-09-15 01:00:04.001 2.0s", "2016-09-15 01:00:07.000 2s"];
 
 var seconds = [60 * 60 * 24 * 30 * 12, 60 * 60 * 24 * 30, 60 * 60 * 24, 60 * 60];
 
@@ -29,18 +29,18 @@ var startend;
 
 function solve(line, index0) {
   var sec = 0;
-  var arr = line.split(' ');
+  var arr = line.split(" ");
   arr.map((item, index) => {
     // 2016-09-15 20:59:57.421 0.351s
     if (index === 0) {
       // 2019-06-15
-      var subarr = item.split('-');
+      var subarr = item.split("-");
       subarr.map((item2, index2) => {
         sec += seconds[index2] * item2;
       });
     } else if (index === 1) {
       // 20:59:57.421
-      var subarr = item.split(':');
+      var subarr = item.split(":");
       subarr.map((item2, index2) => {
         // 20h 59m 57.421s,
         if (index2 == 2) {
@@ -98,7 +98,7 @@ function solution(lines) {
           console.log(startTime, endTime, windowStartTime, windowEndTime);
           count++;
         }
-        console.log('\n');
+        console.log("\n");
       }
       maxCount = Math.max(count, maxCount);
     }

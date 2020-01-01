@@ -1,7 +1,7 @@
 ---
-path: '/posts/react/3'
-date: '2019-12-16'
-title: 'My first blog post'
+path: "/posts/react/3"
+date: "2019-12-16"
+title: "My first blog post"
 ---
 
 세번째 리액트 게시글

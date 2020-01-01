@@ -51,6 +51,13 @@ const Card = styled.div`
     padding-bottom: 56.25%;
     position: relative;
     display: block;
+    .gatsby-image-wrapper {
+      position: absolute !important;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
   }
   .contents-wrapper {
     display: flex;
@@ -121,12 +128,12 @@ const PostCard = ({ data, fluidImage, gif }) => {
             if (hero) {
               // 마크다운에 배너 이미지를 설정한 경우(png) : 1순위
               image = <Image fluid={hero.childImageSharp.fluid} alt="마크다운 카드 배너" />;
-            } else if (gif) {
-              // 기본 카드 배너 이미지(gif) : 2순위
-              image = <img className="banner" src={gif} alt="포스트 기본 gif 배너" />;
             } else if (fluidImage) {
-              // 기본 카드 배너 이미지(webp) : 3순위
-              image = <Image fluid={fluidImage} alt="포스트 기본 webp 배너" />;
+              // 기본 카드 배너 이미지(png) : 2순위
+              image = <Image fluid={fluidImage} alt="포스트 기본 png 배너" />;
+            } else if (gif) {
+              // 기본 카드 배너 이미지(gif) : 3순위
+              image = <img className="banner" src={gif} alt="포스트 기본 gif 배너" />;
             }
             return image;
           })()}

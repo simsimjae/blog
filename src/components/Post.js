@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import ReactUtterences from 'react-utterances';
+import React from "react";
+import styled from "styled-components";
+import ReactUtterences from "react-utterances";
 
 const PostWrapper = styled.div`
   display: flex;
@@ -19,18 +19,19 @@ const PostWrapper = styled.div`
     color: black;
     text-align: center;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: normal;
     word-break: keep-all;
     word-wrap: break-word;
   }
   .post_date {
-    color: #777;
-    text-align: right;
+    color: #b2b2b2;
+    text-align: center;
     margin: 30px 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
   }
   p {
-    font-size: 2.1rem;
+    font-size: 2rem;
     margin: 30px 0;
     color: #222;
     line-height: 1.8;
@@ -73,7 +74,7 @@ const PostWrapper = styled.div`
     margin: 20px 0;
     color: #444;
     li:before {
-      content: '';
+      content: "";
     }
   }
   ul {
@@ -170,7 +171,7 @@ const PostWrapper = styled.div`
 `;
 
 const Post = ({ html, frontmatter }) => {
-  const repo = 'simsimjae/simsimjae.github.io';
+  const repo = "simsimjae/simsimjae.github.io";
   return (
     <PostWrapper>
       <h1 className="post_title">{frontmatter.title}</h1>

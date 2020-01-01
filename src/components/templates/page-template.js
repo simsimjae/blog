@@ -1,16 +1,16 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../layout';
-import Post from '../Post';
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../layout";
+import Post from "../Post";
 
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date
         path
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

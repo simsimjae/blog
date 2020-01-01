@@ -1,7 +1,7 @@
 ---
-path: '/posts/react/1'
-date: '2019-12-14'
-title: 'My first blog post'
+path: "/posts/react/1"
+date: "2019-12-14"
+title: "My first blog post"
 ---
 
 # 첫번째 리엑트 게시물입니다.

@@ -30,7 +30,7 @@ const PostCardList = ({ posts, images }) => {
       {posts.map(item => {
         const node = getImageNode(images);
 
-        return <PostCard key={item.id} data={item.node} fluidImage={node.childImageSharp && node.childImageSharp.fluid} gif={node.publicURL} />;
+        return <PostCard key={item.id} data={item.node} fluidImage={node.childImageSharp && node.childImageSharp.fluid} gif={node.publicURL && node.publicURL} />;
       })}
     </List>
   );

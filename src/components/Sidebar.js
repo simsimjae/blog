@@ -93,7 +93,7 @@ const sidebar = () => {
             }
           }
         }
-        allFile(filter: { relativePath: { glob: "icons/profiles/*.png" } }) {
+        allFile(filter: { relativePath: { glob: "icons/profiles/*.png" } }, sort: { fields: name, order: ASC }) {
           edges {
             node {
               childImageSharp {

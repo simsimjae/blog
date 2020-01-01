@@ -1,7 +1,7 @@
 ---
-path: '/posts/TIL/1'
-title: '반응형 웹 사이트 제작 - margin, padding을 rem이나 em단위로 설정하지 마라!'
-date: '2019년 12월 25일'
+path: "/posts/TIL/1"
+title: "반응형 웹 사이트 제작 - margin, padding을 rem이나 em단위로 설정하지 마라!"
+date: "2019-12-25"
 ---
 
 크리스마스에 코딩하고 있는 내 인생이 레전드 같지만 오늘도 달린다..
