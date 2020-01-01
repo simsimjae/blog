@@ -1,8 +1,8 @@
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: 'SimSimJae의 기술 블로그',
+    title: "심재철의 기술 블로그",
     description: `1day && 1commit`,
     author: `Sim Jae Cheol`
   },
@@ -31,9 +31,9 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'posts',
+        name: "posts",
         path: `${__dirname}/posts`
       }
     },
@@ -54,7 +54,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-',
+              classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
@@ -64,14 +64,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-emoji`,
             options: {
-              emojiConversion: 'shortnameToUnicode',
+              emojiConversion: "shortnameToUnicode",
               ascii: true
             }
           }
         ]
       }
     },
-    'gatsby-plugin-sass'
+    "gatsby-plugin-sass"
     // {
     //   resolve: 'gatsby-source-pixabay',
     //   options: {

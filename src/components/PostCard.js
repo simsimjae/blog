@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
-import Image from 'gatsby-image';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+import Image from "gatsby-image";
 
 const Card = styled.div`
   line-height: 1.3;
-  border: 1px solid #e0e0e0;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   border-radius: 10px;
   box-sizing: border-box;
@@ -27,7 +27,7 @@ const Card = styled.div`
   }
   &:hover {
     .thumbnail-wrapper:before {
-      content: '';
+      content: "";
       background: black;
       opacity: 0.2;
       display: block;

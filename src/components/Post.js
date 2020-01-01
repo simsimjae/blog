@@ -34,13 +34,15 @@ const PostWrapper = styled.div`
     font-size: 2rem;
     margin: 30px 0;
     color: #222;
-    line-height: 1.8;
+    line-height: 2;
     word-break: break-all;
   }
   h1,
   h2,
   h3 {
     color: #222;
+    font-weight: normal;
+    font-family: "Roboto, Noto Sans KR, sans-serif";
     &:first-child {
       margin-top: 50px;
     }
@@ -53,22 +55,19 @@ const PostWrapper = styled.div`
   }
   h1 {
     font-size: 3rem;
-    font-weight: bold;
     margin: 80px 0 40px;
     position: relative;
   }
   h2 {
     font-size: 2.4rem;
-    font-weight: bold;
     margin: 80px 0 40px;
   }
   h3 {
     font-size: 2rem;
-    font-weight: bold;
     margin: 40px 0;
   }
   ol {
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-left: 30px;
     list-style: initial;
     margin: 20px 0;
@@ -78,7 +77,7 @@ const PostWrapper = styled.div`
     }
   }
   ul {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #444;
     padding-left: 30px;
     list-style: decimal;
@@ -93,6 +92,33 @@ const PostWrapper = styled.div`
     padding: 3px 5px;
     border-radius: 5px;
     background: #ffefd5;
+  }
+  blockquote {
+    position: relative;
+    padding: 10px 20px;
+    padding-left: 60px;
+    background: #fbfbfb;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    p {
+      color: #666;
+      font-size: 2rem;
+      line-height: 1.8;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    &:before {
+      top: 40px;
+      left: 20px;
+      color: #ccc;
+      font-size: 32px;
+      content: "\f10d";
+      position: absolute;
+      text-align: center;
+      font-style: normal;
+      font-family: "FontAwesome";
+    }
   }
   @media screen and (max-width: 1500px) {
     & {
@@ -133,7 +159,6 @@ const PostWrapper = styled.div`
       }
       h1 {
         font-size: 2.4rem;
-        font-weight: bold;
         margin: 50px 0 20px;
         position: relative;
       }
@@ -176,7 +201,7 @@ const Post = ({ html, frontmatter }) => {
     <PostWrapper>
       <h1 className="post_title">{frontmatter.title}</h1>
       <p className="post_date">{frontmatter.date}</p>
-      <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="post" dangerouslySetInnerHTML={{ __html: html }} />차
       <ReactUtterences repo={repo} type="url" theme="" />
     </PostWrapper>
   );
