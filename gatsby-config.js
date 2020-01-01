@@ -71,18 +71,19 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-source-pixabay',
-      options: {
-        key: process.env.PIXABAY_API_KEY,
-        q: 'candy',
-        image_type: 'photo',
-        editors_choice: true,
-        safesearch: true,
-        order: 'popular',
-        per_page: 200
-      }
-    }
+    'gatsby-plugin-sass'
+    // {
+    //   resolve: 'gatsby-source-pixabay',
+    //   options: {
+    //     key: process.env.PIXABAY_API_KEY,
+    //     q: 'candy',
+    //     category: 'background',
+    //     editors_choice: true,
+    //     safesearch: true,
+    //     orientation: 'horizontal',
+    //     min_width: '1080',
+    //     per_page: 200
+    //   }
+    // }
   ]
 };

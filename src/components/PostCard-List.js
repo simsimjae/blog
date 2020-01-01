@@ -17,20 +17,20 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min; // 최소값 포함 최대값 미포함
 };
 
-const getImageUrl = images => {
+const getImageNode = images => {
   const randomInt = getRandomInt(0, images.length);
   const imageNode = images[randomInt].node;
 
-  return typeof imageNode.publicURL === 'undefined' ? imageNode.largeImageURL : imageNode.publicURL;
+  return imageNode;
 };
 
 const PostCardList = ({ posts, images }) => {
   return (
     <List>
-      {posts.map((item, index) => {
-        const url = getImageUrl(images);
+      {posts.map(item => {
+        const node = getImageNode(images);
 
-        return <PostCard key={index} data={item.node} imageUrl={url} />;
+        return <PostCard key={item.id} data={item.node} fluidImage={node.childImageSharp && node.childImageSharp.fluid} gif={node.publicURL} />;
       })}
     </List>
   );

@@ -28,17 +28,13 @@ export const query = graphql`
     allFile(filter: { relativePath: { glob: "banners/*" } }) {
       edges {
         node {
+          id
           publicURL
-        }
-      }
-    }
-    allPixabayPhoto(limit: 10) {
-      edges {
-        node {
-          largeImageURL
-          pageURL
-          tags
-          user
+          childImageSharp {
+            fluid(maxWidth: 1080) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
         }
       }
     }
@@ -47,10 +43,7 @@ export const query = graphql`
 
 const PostCardListTemplate = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
-  const gifs = data.allFile.edges;
-  const pngs = data.allPixabayPhoto.edges;
-  const images = [...gifs, ...pngs];
-
+  const images = data.allFile.edges;
   return (
     <Layout>
       <PostCardList posts={posts} images={images} />

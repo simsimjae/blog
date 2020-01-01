@@ -107,6 +107,7 @@ const PostWrapper = styled.div`
   @media screen and (max-width: 782px) {
     padding: 16px;
     width: 100%;
+    min-width: 100%;
     margin: 0;
     box-sizing: border-box;
     word-break: break-all;

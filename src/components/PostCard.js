@@ -107,15 +107,30 @@ const Card = styled.div`
   }
 `;
 
-const PostCard = ({ data, imageUrl }) => {
+const PostCard = ({ data, fluidImage, gif }) => {
+  // 기본 카드 배너 이미지, webp 또는 gif로 받음.
   const { path, title, date, hero } = data.frontmatter;
   const { excerpt } = data;
-  console.log(imageUrl);
 
   return (
     <Card>
       <Link to={path}>
-        <div className="thumbnail-wrapper">{hero ? <Image fluid={hero.childImageSharp.fluid} alt="마크다운 카드 배너" /> : <img className="banner" src={imageUrl} alt="포스트 기본 배너" />}</div>
+        <div className="thumbnail-wrapper">
+          {(() => {
+            let image;
+            if (hero) {
+              // 마크다운에 배너 이미지를 설정한 경우(png) : 1순위
+              image = <Image fluid={hero.childImageSharp.fluid} alt="마크다운 카드 배너" />;
+            } else if (gif) {
+              // 기본 카드 배너 이미지(gif) : 2순위
+              image = <img className="banner" src={gif} alt="포스트 기본 gif 배너" />;
+            } else if (fluidImage) {
+              // 기본 카드 배너 이미지(webp) : 3순위
+              image = <Image fluid={fluidImage} alt="포스트 기본 webp 배너" />;
+            }
+            return image;
+          })()}
+        </div>
         <div className="contents-wrapper">
           <p className="title">{title}</p>
           <p className="date">{date}</p>
