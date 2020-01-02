@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Sidebar from './Sidebar';
-import styles from '../styles/index.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import Sidebar from "./Sidebar";
+import styles from "../styles/index.scss";
 
 const Wrapper = styled.div`
   display: flex;
   .contents {
     width: 100%;
-    margin-right: 350px;
+    margin-right: 300px;
   }
   @media screen and (max-width: 1500px) {
     .contents {
-      margin-right: 250px;
+      margin-right: 300px;
     }
   }
   @media screen and (max-width: 1080px) {

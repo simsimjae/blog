@@ -10,16 +10,16 @@ const Card = styled.div`
   border-radius: 10px;
   box-sizing: border-box;
   position: relative;
-  width: calc((100% - 20px * 5) / 4);
-  margin-left: 20px;
-  margin-top: 40px;
-  @media screen and (max-width: 1600px) {
-    width: calc((100% - 20px * 4) / 3);
-    margin-left: 20px;
+  width: calc((100% - 2% * 5) / 4);
+  margin-left: 2%;
+  margin-top: 3%;
+  @media screen and (max-width: 1800px) {
+    width: calc((100% - 3% * 4) / 3);
+    margin-left: 3%;
   }
-  @media screen and (max-width: 1300px) {
-    width: calc((100% - 20px * 3) / 2);
-    margin-left: 20px;
+  @media screen and (max-width: 1400px) {
+    width: calc((100% - 3% * 3) / 2);
+    margin-left: 3%;
   }
   @media screen and (max-width: 700px) {
     width: calc(100% - 3% * 2);
@@ -79,7 +79,8 @@ const Card = styled.div`
     border-top-left-radius: 8px;
   }
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 500;
     color: #222;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -89,7 +90,7 @@ const Card = styled.div`
   .desc {
     font-size: 16px;
     height: 72px;
-    color: #888;
+    color: #aaa;
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 3;
