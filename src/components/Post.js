@@ -11,6 +11,7 @@ const PostWrapper = styled.div`
   line-height: 1.3;
   overflow-x: hidden;
   box-sizing: border-box;
+  font-family: Roboto, "Nanum Gothic", sans-serif;
   .post {
     margin-bottom: 100px;
   }
@@ -42,7 +43,6 @@ const PostWrapper = styled.div`
   h3 {
     color: #222;
     font-weight: normal;
-    font-family: "Roboto, Noto Sans KR, sans-serif";
     &:first-child {
       margin-top: 50px;
     }
@@ -89,7 +89,7 @@ const PostWrapper = styled.div`
     }
   }
   strong {
-    padding: 3px 5px;
+    padding: 2px 5px;
     border-radius: 5px;
     background: #ffefd5;
   }
@@ -147,12 +147,12 @@ const PostWrapper = styled.div`
         font-size: 2.6rem;
       }
       .post_date {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         margin: 0;
       }
       p {
-				line-height: 1.65;
-				font-size: 1.2rem;
+        line-height: 1.65;
+        font-size: 1.6rem;
         margin: 3rem 0;
       }
       img {
@@ -187,10 +187,23 @@ const PostWrapper = styled.div`
         }
       }
       strong {
-        font-size: 1.6rem;
-        padding: 3px 5px;
+        font-size: 1.4rem;
+        line-height: 1;
         border-radius: 5px;
         background: #ffefd5;
+      }
+      blockquote {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &:before {
+          top: 10px;
+        }
+        p {
+          font-size: 1.6rem;
+          line-height: 1.5;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
       }
     }
   }
