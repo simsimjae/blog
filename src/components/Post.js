@@ -187,7 +187,6 @@ const PostWrapper = styled.div`
         }
       }
       strong {
-        font-size: 1.4rem;
         line-height: 1;
         border-radius: 5px;
         background: #ffefd5;
