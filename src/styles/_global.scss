@@ -3,15 +3,15 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', 'Nanum Gothic', sans-serif;
+  font-family: "Roboto", "Nanum Gothic", sans-serif;
 }
 
-.pre[class*='language-'] {
+.pre[class*="language-"] {
   width: 100%;
   box-sizing: border-box;
 }
 
-code[class*='language-'] {
+code[class*="language-"] {
   font-size: 1.6rem;
   line-height: 1.6;
   word-wrap: break-word;
@@ -19,7 +19,7 @@ code[class*='language-'] {
   white-space: pre-wrap;
 }
 
-:not(pre) > code[class*='language-'] {
+:not(pre) > code[class*="language-"] {
   display: inline-block;
   padding: 2px 8px;
   font-size: 18px;
@@ -27,13 +27,12 @@ code[class*='language-'] {
   transform: translateY(-1px);
   background: #f5f5f5;
   color: #ff5b59;
-  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   text-shadow: none;
   word-break: break-all;
 }
 
 @media screen and (max-width: 414px) {
-  :not(pre) > code[class*='language-'] {
+  :not(pre) > code[class*="language-"] {
     font-size: 1.5rem;
     padding: 1px 5px 2px;
     line-height: 1.3;

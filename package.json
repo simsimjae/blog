@@ -31,7 +31,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "fsevents": "^2.1.2",
     "gatsby-plugin-playground": "^1.0.6",
     "gatsby-plugin-sass": "^2.1.26",
     "gatsby-remark-emoji": "^0.0.3",

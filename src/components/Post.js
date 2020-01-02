@@ -151,7 +151,8 @@ const PostWrapper = styled.div`
         margin: 0;
       }
       p {
-        line-height: 1.65;
+				line-height: 1.65;
+				font-size: 1.2rem;
         margin: 3rem 0;
       }
       img {
