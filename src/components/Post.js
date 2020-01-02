@@ -89,7 +89,7 @@ const PostWrapper = styled.div`
     }
   }
   strong {
-    padding: 2px 5px;
+    padding: 3px 5px;
     border-radius: 5px;
     background: #ffefd5;
   }
