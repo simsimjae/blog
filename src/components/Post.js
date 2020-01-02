@@ -214,7 +214,7 @@ const Post = ({ html, frontmatter }) => {
     <PostWrapper>
       <h1 className="post_title">{frontmatter.title}</h1>
       <p className="post_date">{frontmatter.date}</p>
-      <div className="post" dangerouslySetInnerHTML={{ __html: html }} />차
+      <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
       <ReactUtterences repo={repo} type="url" theme="" />
     </PostWrapper>
   );

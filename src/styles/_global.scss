@@ -1,9 +1,24 @@
+@font-face {
+  font-family: "Nanum Gothic";
+  src: local("Nanum Gothic"), url("./fonts/NanumGothic-Regular.ttf") type("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: local("Noto Sans KR"), url("./fonts/NotoSansKR-Regular.otf") format("opentype");
+}
+
 html {
   font-size: 62.5%;
 }
 html,
 body {
-  font-family: "Roboto", "Nanum Gothic", sans-serif;
+  font-family: "Roboto", "Nanum Gothic", "나눔고딕", sans-serif;
 }
 
 .pre[class*="language-"] {
@@ -12,7 +27,7 @@ body {
 }
 
 code[class*="language-"] {
-  font-family: Roboto, "Nanum Gothic", sans-serif;
+  font-family: "Roboto", "Nanum Gothic", "나눔고딕", sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
   word-wrap: break-word;
