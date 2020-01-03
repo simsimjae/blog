@@ -9,19 +9,7 @@ export const PostCardDatas = graphql`
     allMarkdownRemark(filter: { frontmatter: { path: { glob: $postsGlob } } }) {
       edges {
         node {
-          frontmatter {
-            title
-            path
-            date
-            hero {
-              childImageSharp {
-                fluid(maxWidth: 1080) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          excerpt(truncate: true, pruneLength: 200)
+          ...PostCardInfo
         }
       }
     }
