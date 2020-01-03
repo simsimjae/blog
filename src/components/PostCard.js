@@ -79,13 +79,15 @@ const Card = styled.div`
     border-top-left-radius: 8px;
   }
   .title {
-    font-size: 2.2rem;
-    font-weight: 500;
+    font-size: 2.1rem;
+    font-weight: 400;
     color: #222;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
   }
   .desc {
     font-size: 16px;

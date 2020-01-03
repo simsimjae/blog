@@ -28,7 +28,7 @@ const PostWrapper = styled.div`
     color: #b2b2b2;
     text-align: center;
     margin: 30px 0;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
   }
   p {
@@ -155,7 +155,6 @@ const PostWrapper = styled.div`
         font-size: 2.6rem;
       }
       .post_date {
-        font-size: 1.6rem;
         margin: 0;
       }
       p {

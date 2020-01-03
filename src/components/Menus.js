@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
+import React from "react";
+import styled from "styled-components";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 const MenuList = styled.ul`
   padding: 20px 10px;
@@ -16,9 +16,6 @@ const MenuList = styled.ul`
       flex-direction: column;
       align-items: center;
     }
-  }
-  .menu_icon {
-    margin-top: -2px;
   }
   .text {
     display: block;
@@ -55,11 +52,18 @@ const MenuList = styled.ul`
   }
 `;
 
+const MenuItem = styled.li`
+  .menu_icon {
+    ${props => (props.round ? "border-radius: 50%" : null)}
+    margin-top: -2px;
+  }
+`;
+
 const Menus = () => {
   const { allFile } = useStaticQuery(
     graphql`
       query {
-        allFile(filter: { relativePath: { glob: "icons/menus/*.png" } }) {
+        allFile(filter: { relativePath: { glob: "icons/menus/*.png" } }, sort: { fields: birthTime, order: ASC }) {
           edges {
             node {
               childImageSharp {
@@ -75,31 +79,43 @@ const Menus = () => {
   );
   const MenuDatas = [
     {
-      name: '리액트',
-      path: 'react',
+      name: "리액트",
+      path: "react",
       icon: allFile.edges[0].node.childImageSharp.fixed
     },
     {
-      name: '세미나',
-      path: 'seminar',
+      name: "TIL",
+      path: "TIL",
       icon: allFile.edges[1].node.childImageSharp.fixed
     },
     {
-      name: 'TIL',
-      path: 'TIL',
+      name: "세미나",
+      path: "seminar",
       icon: allFile.edges[2].node.childImageSharp.fixed
+    },
+    {
+      name: "CSS",
+      path: "css",
+      icon: allFile.edges[3].node.childImageSharp.fixed,
+      round: true
+    },
+    {
+      name: "알고리즘",
+      path: "algorithm",
+      icon: allFile.edges[4].node.childImageSharp.fixed,
+      round: true
     }
   ];
   return (
     <MenuList>
       {MenuDatas.map((item, index) => {
         return (
-          <li className={`item ${item.path}`} key={index}>
+          <MenuItem className={`item ${item.path}`} key={index} round={item.round}>
             <Link to={`/posts/${item.path}`}>
               <Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
               <span className="text">{item.name}</span>
             </Link>
-          </li>
+          </MenuItem>
         );
       })}
     </MenuList>
