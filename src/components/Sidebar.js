@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
-import Menus from './Menus';
+import React from "react";
+import styled from "styled-components";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import Image from "gatsby-image";
+import Menus from "./Menus";
 
 const Sidebar = styled.div`
-  width: 350px;
+  width: 300px;
   background: black;
   color: white;
   position: fixed;
@@ -48,9 +48,6 @@ const Sidebar = styled.div`
   }
 
   @media screen and (max-width: 1500px) {
-    & {
-      width: 250px;
-    }
   }
   @media screen and (max-width: 1080px) {
     & {

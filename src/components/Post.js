@@ -59,12 +59,20 @@ const PostWrapper = styled.div`
     position: relative;
   }
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin: 80px 0 40px;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin: 40px 0;
+  }
+  ol,
+  ul {
+    li {
+      p {
+        margin: 10px 0;
+      }
+    }
   }
   ol {
     font-size: 2rem;
