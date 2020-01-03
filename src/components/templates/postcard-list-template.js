@@ -6,7 +6,7 @@ import PostCardList from "../PostCard-List";
 // 이 템플릿으로 페이지를 찍어내는거니까 여기선 페이지 쿼리 사용 가능함.
 export const PostCardDatas = graphql`
   query getPosts($postsGlob: String) {
-    allMarkdownRemark(filter: { frontmatter: { path: { glob: $postsGlob } } }) {
+    allMarkdownRemark(filter: { frontmatter: { path: { glob: $postsGlob } } }, sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           ...PostCardInfo

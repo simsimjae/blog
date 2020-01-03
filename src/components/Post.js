@@ -34,7 +34,8 @@ const PostWrapper = styled.div`
   p {
     font-size: 2rem;
     margin: 30px 0;
-    color: #222;
+    color: #555;
+    opacity: 0.9;
     line-height: 1.65;
     word-break: break-all;
   }
