@@ -35,7 +35,7 @@ const PostWrapper = styled.div`
     font-size: 2rem;
     margin: 30px 0;
     color: #222;
-    line-height: 2;
+    line-height: 1.65;
     word-break: break-all;
   }
   h1,

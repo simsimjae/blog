@@ -67,6 +67,13 @@ module.exports = {
               emojiConversion: "shortnameToUnicode",
               ascii: true
             }
+          },
+          {
+            resolve: "@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "dark",
+              height: 400
+            }
           }
         ]
       }
