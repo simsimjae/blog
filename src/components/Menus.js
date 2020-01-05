@@ -54,7 +54,7 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li`
   .menu_icon {
-    ${props => (props.round ? "border-radius: 50%" : null)}
+    border-radius: ${props => (props.round ? "50%" : "0")};
     margin-top: -2px;
   }
 `;
