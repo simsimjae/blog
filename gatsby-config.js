@@ -78,7 +78,13 @@ module.exports = {
         ]
       }
     },
-    "gatsby-plugin-sass"
+    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false
+      }
+    }
     // {
     //   resolve: 'gatsby-source-pixabay',
     //   options: {

@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PostCardList from "../components/PostCard-List";
+import styles from "../styles/index.scss";
 
 export const PostCardDatas = graphql`
   query getPostCardList {
@@ -30,7 +31,6 @@ export const PostCardDatas = graphql`
 `;
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const posts = data.allMarkdownRemark.edges;
   const images = data.allFile.edges;
   return (

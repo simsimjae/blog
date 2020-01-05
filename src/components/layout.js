@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Sidebar from "./Sidebar";
-import styles from "../styles/index.scss";
 
 const Wrapper = styled.div`
   display: flex;
