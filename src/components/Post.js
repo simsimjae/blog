@@ -34,7 +34,7 @@ const PostWrapper = styled.div`
 	p {
 		font-size: 2rem;
 		margin: 30px 0;
-		color: #454b59;
+		color: #444;
 		opacity: 0.9;
 		line-height: 1.65;
 		word-break: break-all;
@@ -219,11 +219,11 @@ const PostWrapper = styled.div`
 const Post = ({ html, frontmatter }) => {
 	const repo = "simsimjae/simsimjae.github.io";
 	return (
-  <PostWrapper>
-  <h1 className="post_title">{frontmatter.title}</h1>
-  <p className="post_date">{frontmatter.date}</p>
-  <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
-  <ReactUtterences repo={repo} type="url" theme="" />
+		<PostWrapper>
+			<h1 className="post_title">{frontmatter.title}</h1>
+			<p className="post_date">{frontmatter.date}</p>
+			<div className="post" dangerouslySetInnerHTML={{ __html: html }} />
+			<ReactUtterences repo={repo} type="url" theme="" />
 		</PostWrapper>
 	);
 };
