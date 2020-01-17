@@ -34,16 +34,21 @@ const PostWrapper = styled.div`
 	p {
 		font-size: 2rem;
 		margin: 30px 0;
-		color: #444;
+		color: #222;
 		opacity: 0.9;
 		line-height: 1.65;
 		word-break: break-all;
+		letter-spacing: 0.7px;
+	}
+	a {
+		font-weight: bold;
+		color: #222;
 	}
 	h1,
 	h2,
 	h3 {
 		color: #222;
-		font-weight: normal;
+		font-weight: bold;
 		&:first-child {
 			margin-top: 50px;
 		}
@@ -60,25 +65,25 @@ const PostWrapper = styled.div`
 		position: relative;
 	}
 	h2 {
-		font-size: 2.6rem;
-		margin: 80px 0 40px;
+		font-size: 2.4rem;
+		margin: 60px 0 20px;
 	}
 	h3 {
-		font-size: 2.4rem;
-		margin: 40px 0;
+		font-size: 2.2rem;
+		margin: 40px 0 20px;
 	}
 	ol,
 	ul {
 		li {
 			p {
-				margin: 10px 0;
+				margin: 20px 0;
 			}
 		}
 	}
 	ol {
 		font-size: 2rem;
-		padding-left: 30px;
-		list-style: initial;
+		padding-left: 50px;
+		list-style: decimal;
 		margin: 20px 0;
 		color: #444;
 		li:before {
@@ -88,39 +93,37 @@ const PostWrapper = styled.div`
 	ul {
 		font-size: 2rem;
 		color: #444;
-		padding-left: 30px;
-		list-style: decimal;
+		padding-left: 50px;
+		list-style: initial;
 		margin: 20px 0;
 	}
 	li {
 		& + li {
-			margin-top: 15px;
+			margin-top: 20px;
 		}
 	}
 	strong {
-		padding: 3px 5px;
-		border-radius: 5px;
-		background: #ffefd5;
+		font-weight: bold;
+		color: black;
 	}
 	blockquote {
 		position: relative;
-		padding: 10px 20px;
+		padding: 1px 20px;
 		padding-left: 60px;
 		background: #f9f9f9;
 		border-radius: 5px;
 		box-sizing: border-box;
 
 		p {
-			color: #666;
+			color: #222;
 			font-size: 2rem;
 			line-height: 1.8;
-			margin-left: 10px;
-			margin-right: 10px;
+			margin: 20px 10px;
 		}
 		&:before {
-			top: 40px;
+			top: 20px;
 			left: 20px;
-			color: #ccc;
+			color: #999;
 			font-size: 32px;
 			content: "\f10d";
 			position: absolute;
@@ -193,11 +196,6 @@ const PostWrapper = styled.div`
 				& + li {
 					margin-top: 10px;
 				}
-			}
-			strong {
-				line-height: 1;
-				border-radius: 5px;
-				background: #ffefd5;
 			}
 			blockquote {
 				padding-top: 20px;

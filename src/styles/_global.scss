@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Nanum Gothic";
-	src: local("Nanum Gothic"), url("./fonts/NanumGothic-Regular.ttf") type("truetype");
+	src: local("Nanum Gothic"), url("./fonts/NanumGothic-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -36,12 +36,14 @@ code[class*="language-"] {
 	font-family: "D2 Coding", "Nanum Gothic", "나눔고딕", sans-serif;
 	font-size: 1.8rem;
 	line-height: 1.3;
+	letter-spacing: 0.5px;
 	word-wrap: break-word;
 	word-break: break-all;
 	white-space: pre-wrap;
 }
 
 :not(pre) > code[class*="language-"] {
+	font-family: "Apple SD Gothic Neo", "AppleSDGothicNeo", "Roboto", "Nanum Gothic", "나눔고딕", sans-serif;
 	display: inline-block;
 	padding: 5px 8px;
 	line-height: 1;
