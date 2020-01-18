@@ -54,8 +54,15 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li`
 	.menu_icon {
+		display: block;
+		width: 35px;
+		height: 35px;
 		border-radius: ${props => (props.round ? "50%" : "0")};
 		margin-top: -2px;
+		&.node {
+			height: 38px;
+			margin-top: -5px;
+		}
 	}
 `;
 
@@ -67,8 +74,8 @@ const Menus = () => {
 					edges {
 						node {
 							childImageSharp {
-								fixed(width: 35, height: 35) {
-									...GatsbyImageSharpFixed
+								fluid(maxWidth: 35) {
+									...GatsbyImageSharpFluid
 								}
 							}
 						}
@@ -81,29 +88,34 @@ const Menus = () => {
 		{
 			name: "리액트",
 			path: "react",
-			icon: allFile.edges[0].node.childImageSharp.fixed
+			icon: allFile.edges[0].node.childImageSharp.fluid
 		},
 		{
 			name: "TIL",
 			path: "TIL",
-			icon: allFile.edges[1].node.childImageSharp.fixed
+			icon: allFile.edges[1].node.childImageSharp.fluid
 		},
 		{
 			name: "세미나",
 			path: "seminar",
-			icon: allFile.edges[2].node.childImageSharp.fixed
-		},
-		{
-			name: "알고리즘",
-			path: "algorithm",
-			icon: allFile.edges[3].node.childImageSharp.fixed,
-			round: true
+			icon: allFile.edges[2].node.childImageSharp.fluid
 		},
 		{
 			name: "CSS",
 			path: "css",
-			icon: allFile.edges[4].node.childImageSharp.fixed,
+			icon: allFile.edges[3].node.childImageSharp.fluid,
 			round: true
+		},
+		{
+			name: "알고리즘",
+			path: "algorithm",
+			icon: allFile.edges[4].node.childImageSharp.fluid,
+			round: true
+		},
+		{
+			name: "Node",
+			path: "node",
+			icon: allFile.edges[5].node.childImageSharp.fluid
 		}
 	];
 	return (
@@ -112,7 +124,7 @@ const Menus = () => {
 				return (
 					<MenuItem className={`item ${item.path}`} key={index} round={item.round}>
 						<Link to={`/posts/${item.path}`}>
-							<Image fixed={item.icon} alt={`${item.path} icon`} className="menu_icon" />
+							<Image fluid={item.icon} alt={`${item.path} icon`} className={`menu_icon ${item.path}`} />
 							<span className="text">{item.name}</span>
 						</Link>
 					</MenuItem>
