@@ -30,6 +30,7 @@ pre[class*="language-"] {
 	width: 100%;
 	padding: 15px;
 	box-sizing: border-box;
+	overflow: auto;
 }
 
 code[class*="language-"] {
@@ -39,7 +40,6 @@ code[class*="language-"] {
 	letter-spacing: 0.5px;
 	word-wrap: break-word;
 	word-break: break-all;
-	white-space: pre-wrap;
 }
 
 :not(pre) > code[class*="language-"] {
