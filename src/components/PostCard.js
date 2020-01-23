@@ -79,8 +79,9 @@ const Card = styled.div`
 		border-top-left-radius: 8px;
 	}
 	.title {
-		font-size: 2.1rem;
+		font-size: 2.3rem;
 		font-weight: 400;
+		letter-spacing: 0.5px;
 		color: #222;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
@@ -91,11 +92,11 @@ const Card = styled.div`
 	}
 	.desc {
 		font-size: 16px;
-		height: 72px;
+		height: 50px;
 		color: #aaa;
 		line-height: 1.5;
 		display: -webkit-box;
-		-webkit-line-clamp: 3;
+		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}

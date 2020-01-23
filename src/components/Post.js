@@ -32,17 +32,17 @@ const PostWrapper = styled.div`
 		letter-spacing: 2px;
 	}
 	p {
-		font-size: 2.2rem;
-		margin: 30px 0;
-		color: #444;
+		font-size: 2.1rem;
+		margin: 50px 0;
+		color: #555;
 		opacity: 0.9;
-		line-height: 1.65;
+		line-height: 1.8;
 		word-break: break-all;
-		letter-spacing: 0.5px;
+		letter-spacing: 0.3px;
 	}
 	a {
 		font-weight: bold;
-		color: #222;
+		color: #ff5b59;
 	}
 	h1,
 	h2,
