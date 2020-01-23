@@ -4,34 +4,35 @@ import styled from "styled-components";
 import Sidebar from "./Sidebar";
 
 const Wrapper = styled.div`
-  display: flex;
-  .contents {
-    width: 100%;
-    margin-right: 300px;
-  }
-  @media screen and (max-width: 1500px) {
-    .contents {
-      margin-right: 300px;
-    }
-  }
-  @media screen and (max-width: 1080px) {
-    .contents {
-      margin: 100px 0;
-    }
-  }
+	display: flex;
+	background: #fdfdfd;
+	.contents {
+		width: 100%;
+		margin-right: 300px;
+	}
+	@media screen and (max-width: 1500px) {
+		.contents {
+			margin-right: 300px;
+		}
+	}
+	@media screen and (max-width: 1080px) {
+		.contents {
+			margin: 100px 0;
+		}
+	}
 `;
 
 const Layout = ({ children }) => {
-  return (
-    <Wrapper>
-      <Sidebar />
-      <main className="contents">{children}</main>
-    </Wrapper>
-  );
+	return (
+		<Wrapper>
+			<Sidebar />
+			<main className="contents">{children}</main>
+		</Wrapper>
+	);
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+	children: PropTypes.node.isRequired
 };
 
 export default Layout;

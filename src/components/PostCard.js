@@ -5,25 +5,33 @@ import Image from "gatsby-image";
 
 const Card = styled.div`
 	line-height: 1.3;
-	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+	box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, 0.15);
 	overflow: hidden;
 	border-radius: 10px;
 	box-sizing: border-box;
 	position: relative;
-	width: calc((100% - 2% * 5) / 4);
-	margin-left: 2%;
-	margin-top: 3%;
-	@media screen and (max-width: 1800px) {
-		width: calc((100% - 3% * 4) / 3);
-		margin-left: 3%;
+	width: calc((100% - 2% * 4) / 3);
+	margin: 2% 0 0 2%;
+
+	@media screen and (max-width: 1700px) {
+		width: calc((100% - 2% * 4) / 3);
+		margin: 2% 0 0 2%;
 	}
-	@media screen and (max-width: 1400px) {
+	@media screen and (max-width: 1500px) {
+		width: calc((100% - 4% * 3) / 2);
+		margin: 4% 0 0 4%;
+	}
+	@media screen and (max-width: 1200px) {
+		width: calc((100% - 2% * 3) / 2);
+		margin: 2% 0 0 2%;
+	}
+	@media screen and (max-width: 1080px) {
 		width: calc((100% - 3% * 3) / 2);
-		margin-left: 3%;
+		margin: 3% 0 0 3%;
 	}
 	@media screen and (max-width: 700px) {
-		width: calc(100% - 3% * 2);
-		margin-left: 3%;
+		width: calc(100% - 5% * 2);
+		margin: 5% 0 0 5%;
 	}
 	&:hover {
 		.thumbnail-wrapper:before {
@@ -79,10 +87,10 @@ const Card = styled.div`
 		border-top-left-radius: 8px;
 	}
 	.title {
-		font-size: 2.3rem;
+		font-size: 2.2rem;
 		font-weight: 400;
 		letter-spacing: 0.5px;
-		color: #222;
+		color: #444;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
@@ -92,11 +100,11 @@ const Card = styled.div`
 	}
 	.desc {
 		font-size: 16px;
-		height: 50px;
+		height: 70px;
 		color: #aaa;
 		line-height: 1.5;
 		display: -webkit-box;
-		-webkit-line-clamp: 2;
+		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
@@ -105,7 +113,7 @@ const Card = styled.div`
 		opacity: 0.5;
 		font-size: 12px;
 		text-align: right;
-		margin: 3% 0 5%;
+		margin: 5% 0;
 		word-break: break-all;
 	}
 	.banner {
