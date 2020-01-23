@@ -32,13 +32,13 @@ const PostWrapper = styled.div`
 		letter-spacing: 2px;
 	}
 	p {
-		font-size: 2rem;
+		font-size: 2.2rem;
 		margin: 30px 0;
-		color: #222;
+		color: #444;
 		opacity: 0.9;
 		line-height: 1.65;
 		word-break: break-all;
-		letter-spacing: 0.7px;
+		letter-spacing: 0.5px;
 	}
 	a {
 		font-weight: bold;
