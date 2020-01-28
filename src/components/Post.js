@@ -6,12 +6,12 @@ const PostWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	min-width: 750px;
-	width: 70%;
+	width: 60%;
 	margin: 50px auto 200px;
 	line-height: 1.3;
 	overflow-x: hidden;
 	box-sizing: border-box;
-	font-family: Roboto, "Nanum Gothic", sans-serif;
+	font-family: "Roboto", "KoPub Batang Medium", sans-serif;
 	.post {
 		margin-bottom: 100px;
 	}
@@ -21,7 +21,7 @@ const PostWrapper = styled.div`
 		text-align: center;
 		margin-bottom: 20px;
 		font-weight: normal;
-		word-break: keep-all;
+		word-break: break-all;
 		word-wrap: break-word;
 	}
 	.post_date {
@@ -34,10 +34,10 @@ const PostWrapper = styled.div`
 	p {
 		font-size: 2.1rem;
 		margin: 50px 0;
-		color: #555;
-		opacity: 0.9;
-		line-height: 1.8;
+		color: #222;
+		line-height: 1.7;
 		word-break: break-all;
+		word-wrap: break-word;
 		letter-spacing: 0.3px;
 	}
 	a {
@@ -85,14 +85,14 @@ const PostWrapper = styled.div`
 		padding-left: 50px;
 		list-style: decimal;
 		margin: 20px 0;
-		color: #444;
+		color: #333;
 		li:before {
 			content: "";
 		}
 	}
 	ul {
 		font-size: 2rem;
-		color: #444;
+		color: #333;
 		padding-left: 50px;
 		list-style: initial;
 		margin: 20px 0;
