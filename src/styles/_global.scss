@@ -23,6 +23,11 @@
 	src: local("KoPub Batang Medium"), url("./fonts/KoPubWorld Batang Medium.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "KoPub Dotum Medium";
+	src: local("KoPub Dotum Medium"), url("./fonts/KoPubWorld Dotum Medium.ttf") format("truetype");
+}
+
 html {
 	font-size: 62.5%;
 }
