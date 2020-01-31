@@ -8,11 +8,11 @@ const Wrapper = styled.div`
 	background: #fcfcfc;
 	.contents {
 		width: 100%;
-		margin-right: 300px;
+		margin-right: 250px;
 	}
 	@media screen and (max-width: 1500px) {
 		.contents {
-			margin-right: 300px;
+			margin-right: 250px;
 		}
 	}
 	@media screen and (max-width: 1080px) {

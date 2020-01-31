@@ -34,7 +34,7 @@ const PostWrapper = styled.div`
 	p {
 		font-size: 2.1rem;
 		margin: 50px 0;
-		color: #222;
+		color: #555;
 		line-height: 1.7;
 		word-break: break-all;
 		word-wrap: break-word;
@@ -136,6 +136,12 @@ const PostWrapper = styled.div`
 		& {
 			padding: 20px;
 			margin: 0 auto;
+			width: 77%;
+			p,
+			ul,
+			ol {
+				font-size: 1.9rem;
+			}
 		}
 	}
 	@media screen and (max-width: 1080px) {
