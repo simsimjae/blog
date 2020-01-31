@@ -6,7 +6,7 @@ const PostWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	min-width: 750px;
-	width: 60%;
+	width: 70%;
 	margin: 50px auto 200px;
 	line-height: 1.3;
 	overflow-x: hidden;
