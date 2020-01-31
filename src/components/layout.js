@@ -5,7 +5,6 @@ import Sidebar from "./Sidebar";
 
 const Wrapper = styled.div`
 	display: flex;
-	background: #fcfcfc;
 	.contents {
 		width: 100%;
 		margin-right: 250px;
