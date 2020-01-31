@@ -104,7 +104,7 @@ const PostWrapper = styled.div`
 	}
 	strong {
 		font-weight: bold;
-		color: black;
+		color: #333;
 	}
 	blockquote {
 		position: relative;
