@@ -115,8 +115,7 @@ const PostWrapper = styled.div`
 		box-sizing: border-box;
 
 		p {
-			color: #222;
-			font-size: 2.1rem;
+			font-size: 1.8rem;
 			line-height: 1.8;
 			margin: 20px 10px;
 		}
@@ -137,6 +136,9 @@ const PostWrapper = styled.div`
 			padding: 20px;
 			margin: 0 auto;
 			width: 80%;
+		}
+		p {
+			font-size: 1.9rem;
 		}
 	}
 	@media screen and (max-width: 1080px) {
