@@ -31,8 +31,12 @@ const PostWrapper = styled.div`
 		font-size: 1.6rem;
 		letter-spacing: 2px;
 	}
+	p,
+	ol,
+	ul {
+		font-size: 2rem;
+	}
 	p {
-		font-size: 2.2rem;
 		margin: 50px 0;
 		color: #666;
 		line-height: 1.7;
@@ -81,7 +85,6 @@ const PostWrapper = styled.div`
 		}
 	}
 	ol {
-		font-size: 2.2rem;
 		padding-left: 50px;
 		list-style: decimal;
 		margin: 20px 0;
@@ -91,7 +94,6 @@ const PostWrapper = styled.div`
 		}
 	}
 	ul {
-		font-size: 2.2rem;
 		color: #333;
 		padding-left: 50px;
 		list-style: initial;
