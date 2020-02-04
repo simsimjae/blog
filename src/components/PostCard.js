@@ -139,7 +139,7 @@ const PostCard = ({ data, fluidImage, gif }) => {
 						let image;
 						if (hero) {
 							// 마크다운에 배너 이미지를 설정한 경우(png) : 1순위
-							image = <Image fluid={hero.childImageSharp.fluid} alt="마크다운 카드 배너" imgStyle={{ objectFit: "fill" }} />;
+							image = <Image fluid={hero.childImageSharp.fluid} alt="마크다운 카드 배너" imgStyle={{ objectFit: "contain" }} />;
 						} else if (fluidImage) {
 							// 기본 카드 배너 이미지(png) : 2순위
 							image = <Image fluid={fluidImage} alt="포스트 기본 png 배너" />;

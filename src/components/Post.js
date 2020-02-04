@@ -114,8 +114,10 @@ const PostWrapper = styled.div`
 		border-radius: 5px;
 		box-sizing: border-box;
 
-		p {
-			font-size: 1.8rem;
+		p,
+		ol,
+		ul {
+			font-size: 2rem;
 			line-height: 1.8;
 			margin: 20px 10px;
 		}
@@ -137,13 +139,20 @@ const PostWrapper = styled.div`
 			margin: 0 auto;
 			width: 80%;
 		}
-		p {
-			font-size: 1.9rem;
+		p,
+		ol,
+		ul {
+			font-size: 1.8rem;
 		}
 	}
 	@media screen and (max-width: 1080px) {
 		& {
 			padding: 32px;
+		}
+		p,
+		ol,
+		ul {
+			font-size: 1.8rem;
 		}
 	}
 	@media screen and (max-width: 782px) {
