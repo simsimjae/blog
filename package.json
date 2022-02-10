@@ -41,7 +41,7 @@
     "gatsby-source-pixabay": "^1.0.3",
     "gatsby-transformer-remark": "^2.6.43",
     "gh-pages": "^2.1.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "prettier": "^1.19.1",
     "remove-markdown": "^0.3.0"
